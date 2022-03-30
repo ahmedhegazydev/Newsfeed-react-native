@@ -43,7 +43,6 @@ function MainContainer() {
         <Tab.Screen name={HOME_NAME} component={HomeScreen} />
         {/* <Tab.Screen name={detailsName} component={DetailsScreen} /> */}
         <Tab.Screen name={SETTINGS_NAME} component={SettingsScreen} />
-
       </Tab.Navigator>
     </NavigationContainer>
   );
