@@ -20,6 +20,7 @@
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import * as myConstClass from './src/constants/contants.js';
 
 import {
   Colors,
@@ -28,6 +29,8 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import HomeScreen from './src/navigation/screens/Home.js';
+import SettingsScreen from './src/navigation/screens/Settings.js';
 
 
 function MyTabBar({ state, descriptors, navigation }) {
@@ -87,9 +90,11 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator tabBar={(props) => <MyTabBar {...props} />}>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+      <Tab.Navigator 
+      initialRouteName={myConstClass.SETTINGS_NAME}
+      tabBar={(props) => <MyTabBar {...props} />}>
+        <Tab.Screen name= {myConstClass.HOME_NAME} component={HomeScreen} />
+        <Tab.Screen name={myConstClass.SETTINGS_NAME} component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
