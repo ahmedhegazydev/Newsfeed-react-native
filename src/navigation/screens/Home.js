@@ -23,7 +23,11 @@ export default function HomeScreen({navigation}) {
     //     <Text>Home!</Text>
     //   </View>
 
-<Stack.Navigator>
+<Stack.Navigator
+ screenOptions={{
+  // headerShown: false
+}}
+>
 <Stack.Screen name={LIST_ALL_NEWS_NAME} component={ListAllNewsScreen}/>
 {/* <Stack.Screen component={ListAllNewsScreen}/> */}
 </Stack.Navigator >
