@@ -15,6 +15,7 @@ function MainContainer() {
       <Tab.Navigator
         initialRouteName={HOME_NAME}
         screenOptions={({ route }) => ({
+          headerShown: false , 
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
             let rn = route.name;
