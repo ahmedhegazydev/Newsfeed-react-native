@@ -11,6 +11,7 @@ export default function Title({ children, numberOfLines = 2, size = 18 }) {
       // borderRadius: 8,
       // justifyConent: "center",
     },
+    container: {},
   });
 
   return (

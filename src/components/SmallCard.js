@@ -14,8 +14,8 @@ import BlockCard from "./BlockCard";
 
 const { width } = Dimensions.get("window");
 
-export default function SmallCard({}) {
-  return <BlockCard style={styles.container} imagStyle={styles.image} />;
+export default function SmallCard({ item }) {
+  return <BlockCard style={styles.container} imageStyle={styles.image} />;
 }
 
 const styles = StyleSheet.create({

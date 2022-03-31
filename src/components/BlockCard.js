@@ -4,7 +4,9 @@ import { TextInput } from "react-native-gesture-handler";
 import Title from "./Title";
 import SubTitle from "./SubTitle";
 
-export default function BlockCard({ children, style, imageStyle }) {
+export default function BlockCard({ children, style, imageStyle, item }) {
+  const { thumbnail, title, dec } = item;
+
   return (
     <View style={[styles.container, style]}>
       <Image

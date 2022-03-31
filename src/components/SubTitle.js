@@ -11,6 +11,7 @@ export default function SubTitle({ children, numberOfLines = 2, size = 15 }) {
       // borderRadius: 8,
       // justifyConent: "center",
     },
+    container: {},
   });
 
   return (
