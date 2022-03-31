@@ -1,27 +1,22 @@
 import * as React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
+import { Children } from "react/cjs/react.production.min";
 
-export default function SearchBar() {
+export default function SubTitle({ cildren, numberOfLines = 2, size = 15 }) {
   return (
     <View style={styles.container}>
-      <TextInput style={styles.searchInput} placeholder="Search here..." />
+      <Text numberOfLines={numberOfLines}>{Children}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    width: "100%",
-    height: 50,
-    backgroundColor: "white",
-    borderRadius: 8,
-    justifyConent: "center",
-  },
-  searchInput: {
-    width: "100%",
-    height: "100%",
-    paddingLeft: 8,
-    fontSize: 16,
+  title: {
+    fontWeight: "bold",
+    fontSize: size,
+    // backgroundColor: "white",
+    // borderRadius: 8,
+    // justifyConent: "center",
   },
 });
