@@ -2,7 +2,7 @@ import * as React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 
-export default function Title({ children, numberOfLines = 2, size = 18 }) {
+export default function SubTitle({ children, numberOfLines = 2, size = 15 }) {
   const styles = StyleSheet.create({
     title: {
       fontWeight: "bold",

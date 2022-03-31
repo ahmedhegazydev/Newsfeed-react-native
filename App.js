@@ -1,16 +1,19 @@
 import * as React from "react";
-import {
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import BlockCard from "./src/components/BlockCard.js";
+import Screen from "./src/components/Screen.js";
+import SearchBar from "./src/components/SearchBar.js";
 
 import MainContainer from "./src/navigation/MainContainer.js";
 
 export default function App() {
-  return <MainContainer />;
+  return (
+    <Screen>
+      {/* <SearchBar /> */}
+      {/* <MainContainer /> */}
+      <BlockCard />
+    </Screen>
+  );
 }
 
 const styles = StyleSheet.create({

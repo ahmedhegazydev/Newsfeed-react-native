@@ -11,17 +11,17 @@ import SearchBar from "../../components/SearchBar";
 export default function ListAllNewsScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      {/* <Text>List All News!</Text> */}
-      <SearchBar />
+      <Text>List All News!</Text>
+      {/* <SearchBar /> */}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: StatusBar.currentHeight,
-    paddingHorizontal: 15,
-    backgroundColor: "#f7f3f3",
-    flex: 1,
+    // marginTop: StatusBar.currentHeight,
+    // paddingHorizontal: 15,
+    // backgroundColor: "#f7f3f3",
+    // flex: 1,
   },
 });
