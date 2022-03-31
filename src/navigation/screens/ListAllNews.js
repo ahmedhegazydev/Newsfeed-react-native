@@ -6,11 +6,22 @@ import {
   View,
   TouchableOpacity,
 } from "react-native";
+import SearchBar from "../../components/SearchBar";
 
 export default function ListAllNewsScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>List All News!</Text>
+    <View style={styles.container}>
+      {/* <Text>List All News!</Text> */}
+      <SearchBar />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: StatusBar.currentHeight,
+    paddingHorizontal: 15,
+    backgroundColor: "#f7f3f3",
+    flex: 1,
+  },
+});
