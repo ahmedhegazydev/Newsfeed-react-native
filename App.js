@@ -8,11 +8,11 @@ import MainContainer from "./src/navigation/MainContainer.js";
 
 export default function App() {
   return (
-    <Screen>
-      {/* <SearchBar /> */}
-      {/* <MainContainer /> */}
-      <BlockCard />
-    </Screen>
+    // <Screen>
+    /* <SearchBar /> */
+    <MainContainer />
+    // <BlockCard />
+    // </Screen>
   );
 }
 

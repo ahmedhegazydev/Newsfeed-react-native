@@ -4,16 +4,22 @@ import { TextInput } from "react-native-gesture-handler";
 import Title from "./Title";
 import SubTitle from "./SubTitle";
 
-export default function BlockCard({ children }) {
+export default function BlockCard({ children, style, imageStyle }) {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       <Image
         source={require("../assets/images/test.png")}
-        style={styles.image}
+        style={[styles.image, imageStyle]}
       />
       <View style={styles.contentContainer}>
-        <Title>title</Title>
-        <SubTitle>Sub title</SubTitle>
+        <Title numberOfLines={2} size={18}>
+          Everything you need to build on Android
+        </Title>
+        <SubTitle numberOfLines={3} size={15}>
+          Android Studio is Android's official IDE. It is purpose-built for
+          Android to accelerate your development and help you build the
+          highest-quality apps for every Android device.
+        </SubTitle>
       </View>
     </View>
   );
