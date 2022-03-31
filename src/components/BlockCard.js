@@ -5,22 +5,30 @@ import Title from "./Title";
 import SubTitle from "./SubTitle";
 
 export default function BlockCard({ children, style, imageStyle, item }) {
-  const { thumbnail, title, dec } = item;
+  const { thumbnail, title, desc } = item;
 
   return (
     <View style={[styles.container, style]}>
       <Image
-        source={require("../assets/images/test.png")}
+        // source={require("../assets/images/test.png")}
+        source={{ uri: thumbnail }}
         style={[styles.image, imageStyle]}
       />
       <View style={styles.contentContainer}>
-        <Title numberOfLines={2} size={18}>
+        {/* <Title numberOfLines={2} size={18}>
           Everything you need to build on Android
         </Title>
         <SubTitle numberOfLines={3} size={15}>
           Android Studio is Android's official IDE. It is purpose-built for
           Android to accelerate your development and help you build the
           highest-quality apps for every Android device.
+        </SubTitle> */}
+
+        <Title numberOfLines={2} size={18}>
+          {title}
+        </Title>
+        <SubTitle numberOfLines={3} size={15}>
+          {desc}
         </SubTitle>
       </View>
     </View>
