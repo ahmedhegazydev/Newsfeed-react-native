@@ -10,34 +10,15 @@ import {
 import SearchBar from "../../components/SearchBar";
 import newsApi from "../../api/NewApi";
 import EverythingNews from "../../components/NewsEverything";
+import useNews from "../../hooks/useNews";
 export default function ListAllNewsScreen({ navigation }) {
-  const [newsEverything, setEverythingNews] = useState([]);
-  // const [breakingNews, setEverythingNews] = useState([]);
-  // const [featuredNews, setEverythingNews] = useState([]);
-  // const [politicalNews, setEverythingNews] = useState([]);
-  // const [entertainmentNews, setEverythingNews] = useState([]);
-
-  const filterMultipleNews = async () => {
-    const allNewsEverything = await newsApi.getAllNewsEverything();
-    // const allFeaturedNews = allNewsEverything
-    //   .filter((item) => item.featured === "on")
-    //   .reverse()[0];
-    setEverythingNews(allNewsEverything);
-    console.log(allNewsEverything);
-  };
-
-  useEffect(() => {
-    filterMultipleNews();
-    // return () => {
-    //   effect;
-    // };
-  }, []);
+  const [allNewsEverything] = useNews();
 
   return (
     <View style={styles.container}>
       {/* <Text>List All News!</Text> */}
       {/* <SearchBar /> */}
-      <EverythingNews data={newsEverything} />
+      <EverythingNews data={allNewsEverything} />
     </View>
   );
 }
