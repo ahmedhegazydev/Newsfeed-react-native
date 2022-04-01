@@ -1,15 +1,15 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
+
 import {
   StatusBar,
   StyleSheet,
   Text,
   View,
   TouchableOpacity,
-  useEffect,
-  useState,
 } from "react-native";
 import SearchBar from "../../components/SearchBar";
 import newsApi from "../../api/NewApi";
+import EverythingNews from "../../components/NewsEverything";
 export default function ListAllNewsScreen({ navigation }) {
   const [newsEverything, setEverythingNews] = useState([]);
   // const [breakingNews, setEverythingNews] = useState([]);
@@ -22,6 +22,8 @@ export default function ListAllNewsScreen({ navigation }) {
     // const allFeaturedNews = allNewsEverything
     //   .filter((item) => item.featured === "on")
     //   .reverse()[0];
+    setEverythingNews(allNewsEverything);
+    console.log(allNewsEverything);
   };
 
   useEffect(() => {
@@ -33,8 +35,9 @@ export default function ListAllNewsScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text>List All News!</Text>
+      {/* <Text>List All News!</Text> */}
       {/* <SearchBar /> */}
+      <EverythingNews data={newsEverything} />
     </View>
   );
 }
