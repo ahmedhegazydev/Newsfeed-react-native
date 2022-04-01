@@ -5,13 +5,13 @@ import Title from "./Title";
 import SubTitle from "./SubTitle";
 
 export default function FlatCard({ item }) {
-  const { thumbnail, title, desc } = item;
+  const { urlToImage, title, description } = item;
 
   return (
     <View style={styles.container}>
       <Image
         // source={require("../assets/images/test.png")}
-        source={{ uri: thumbnail }}
+        source={{ uri: urlToImage }}
         style={styles.image}
       />
       <View style={styles.contentContainer}>
@@ -28,7 +28,7 @@ export default function FlatCard({ item }) {
           {title}
         </Title>
         <SubTitle numberOfLines={3} size={15}>
-          {desc}
+          {description}
         </SubTitle>
       </View>
     </View>
