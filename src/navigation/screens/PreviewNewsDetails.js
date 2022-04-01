@@ -8,11 +8,12 @@ import {
   Dimensions,
   TouchableOpacity,
 } from "react-native";
+import Hyperlink from "react-native-hyperlink";
 
 const { width, height } = Dimensions.get("window");
 
 const PreviewNewsDetailsScreen = ({ route }) => {
-  const { urlToImage: image, title, description } = route.params.item;
+  const { urlToImage: image, url, title, description } = route.params.item;
 
   return (
     <ScrollView style={styles.container}>
@@ -26,6 +27,9 @@ const PreviewNewsDetailsScreen = ({ route }) => {
           {/* Everything you need to build on Android */}
           {title}
         </Text>
+        <Hyperlink onPress={(url, text) => alert(url + ", " + text)}>
+          <Text style={{ fontSize: 15, marginBottom: 6 }}>{url}</Text>
+        </Hyperlink>
         <Text style={styles.content}>
           {/* Android Studio is Android's official IDE. It is purpose-built for
           Android to accelerate your development and help you build the
