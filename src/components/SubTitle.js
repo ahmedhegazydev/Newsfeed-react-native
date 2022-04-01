@@ -16,7 +16,9 @@ export default function SubTitle({ children, numberOfLines = 2, size = 15 }) {
 
   return (
     <View style={styles.container}>
-      <Text numberOfLines={numberOfLines}>{children}</Text>
+      <Text numberOfLines={numberOfLines} style={styles.title}>
+        {children}
+      </Text>
     </View>
   );
 }

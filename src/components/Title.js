@@ -16,7 +16,9 @@ export default function Title({ children, numberOfLines = 2, size = 18 }) {
 
   return (
     <View style={styles.container}>
-      <Text numberOfLines={numberOfLines}>{children}</Text>
+      <Text numberOfLines={numberOfLines} style={styles.style}>
+        {children}
+      </Text>
     </View>
   );
 }

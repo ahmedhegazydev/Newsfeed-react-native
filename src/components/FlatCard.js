@@ -27,7 +27,7 @@ export default function FlatCard({ item }) {
         <Title numberOfLines={2} size={18}>
           {title}
         </Title>
-        <SubTitle numberOfLines={3} size={15}>
+        <SubTitle numberOfLines={2} size={10}>
           {description}
         </SubTitle>
       </View>

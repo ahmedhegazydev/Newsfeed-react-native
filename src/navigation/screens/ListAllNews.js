@@ -48,5 +48,6 @@ const styles = StyleSheet.create({
     // paddingHorizontal: 15,
     // backgroundColor: "#f7f3f3",
     // flex: 1,
+    padding: 10,
   },
 });
