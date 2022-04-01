@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import FlatCard from "./FlatCard";
-import Title from "./Title";
+import FlatCard from "../cards/FlatCard";
+import Title from "../Title";
 
 export default function VerticalList({ title, data }) {
   return (

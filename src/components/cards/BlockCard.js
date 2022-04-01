@@ -1,18 +1,18 @@
 import * as React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
-import Title from "./Title";
-import SubTitle from "./SubTitle";
+import Title from "../Title";
+import SubTitle from "../SubTitle";
 
-export default function FlatCard({ item }) {
-  const { urlToImage, title, description } = item;
+export default function BlockCard({ children, style, imageStyle, item }) {
+  const { thumbnail, title, desc } = item;
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       <Image
         // source={require("../assets/images/test.png")}
-        source={{ uri: urlToImage }}
-        style={styles.image}
+        source={{ uri: thumbnail }}
+        style={[styles.image, imageStyle]}
       />
       <View style={styles.contentContainer}>
         {/* <Title numberOfLines={2} size={18}>
@@ -27,8 +27,8 @@ export default function FlatCard({ item }) {
         <Title numberOfLines={2} size={18}>
           {title}
         </Title>
-        <SubTitle numberOfLines={2} size={15}>
-          {description}
+        <SubTitle numberOfLines={3} size={15}>
+          {desc}
         </SubTitle>
       </View>
     </View>
@@ -37,21 +37,22 @@ export default function FlatCard({ item }) {
 
 const styles = StyleSheet.create({
   container: {
-    // width: "100%",
-    height: 80,
-    flexDirection: "row",
-    alignItems: "center",
+    width: "100%",
+    height: 300,
+
+    // fontWeight: "bold",
+    // fontSize: size,
     backgroundColor: "white",
     borderRadius: 8,
+    // justifyConent: "center",
     overflow: "hidden",
-    marginBottom: 10,
   },
   image: {
-    flex: 0.35,
-    height: "100%",
+    width: "100%",
+    height: 200,
   },
   contentContainer: {
-    flex: 0.65,
-    paddingHorizontal: 5,
+    padding: 5,
+    // height: 200,
   },
 });

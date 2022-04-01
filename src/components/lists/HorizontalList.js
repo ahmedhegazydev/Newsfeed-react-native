@@ -1,8 +1,8 @@
 import * as React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { FlatList, TextInput } from "react-native-gesture-handler";
-import SmallCard from "./SmallCard";
-import Title from "./Title";
+import SmallCard from "../cards/SmallCard";
+import Title from "../Title";
 
 export default function HorizontalList({ title, data }) {
   return (

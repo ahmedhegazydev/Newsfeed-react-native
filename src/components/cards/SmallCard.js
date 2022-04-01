@@ -8,8 +8,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
-import Title from "./Title";
-import SubTitle from "./SubTitle";
+import Title from "../Title";
+import SubTitle from "../SubTitle";
 import BlockCard from "./BlockCard";
 
 const { width } = Dimensions.get("window");

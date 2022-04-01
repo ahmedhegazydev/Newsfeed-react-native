@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import BlockCard from "./src/components/BlockCard.js";
+import BlockCard from "./src/components/cards/BlockCard.js";
 import Screen from "./src/components/Screen.js";
 import SearchBar from "./src/components/SearchBar.js";
 
