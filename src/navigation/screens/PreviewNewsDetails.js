@@ -5,33 +5,39 @@ import {
   View,
   ScrollView,
   Image,
-  Dimension,
+  Dimensions,
   TouchableOpacity,
 } from "react-native";
 
-const { width, height } = Dimension.get("window");
+const { width, height } = Dimensions.get("window");
 
-export default function PreviewNewsDetailsScreen({ navigation }) {
+const PreviewNewsDetailsScreen = ({ route }) => {
+  const { urlToImage: image, title, description } = route.params.item;
+
   return (
     <ScrollView style={styles.container}>
       <Image
-        source={require("../assets/images/test.png")}
-        // source={{ uri: thumbnail }}
+        // source={require("/Users/ahmedhegazy/Desktop/ReactNative-Apps/VOIS/Newsfeed/src/assets/images/test.png")}
+        source={{ uri: image }}
         style={[styles.image]}
       />
       <View style={styles.contentContainer}>
         <Text style={styles.title}>
-          Everything you need to build on Android
+          {/* Everything you need to build on Android */}
+          {title}
         </Text>
         <Text style={styles.content}>
-          Android Studio is Android's official IDE. It is purpose-built for
+          {/* Android Studio is Android's official IDE. It is purpose-built for
           Android to accelerate your development and help you build the
-          highest-quality apps for every Android device.
+          highest-quality apps for every Android device. */}
+          {description}
         </Text>
       </View>
     </ScrollView>
   );
-}
+};
+
+export default PreviewNewsDetailsScreen;
 
 const styles = StyleSheet.create({
   container: {

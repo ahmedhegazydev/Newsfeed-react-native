@@ -1,21 +1,35 @@
 import * as React from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+} from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import Title from "../Title";
 import SubTitle from "../SubTitle";
 
-export default function BlockCard({ children, style, imageStyle, item }) {
+export default function BlockCard({
+  children,
+  style,
+  imageStyle,
+  item,
+  onPress,
+}) {
   const { thumbnail, title, desc } = item;
 
   return (
-    <View style={[styles.container, style]}>
-      <Image
-        // source={require("../assets/images/test.png")}
-        source={{ uri: thumbnail }}
-        style={[styles.image, imageStyle]}
-      />
-      <View style={styles.contentContainer}>
-        {/* <Title numberOfLines={2} size={18}>
+    <TouchableWithoutFeedback onPress={onPress}>
+      <View style={[styles.container, style]}>
+        <Image
+          // source={require("../assets/images/test.png")}
+          source={{ uri: thumbnail }}
+          style={[styles.image, imageStyle]}
+        />
+        <View style={styles.contentContainer}>
+          {/* <Title numberOfLines={2} size={18}>
           Everything you need to build on Android
         </Title>
         <SubTitle numberOfLines={3} size={15}>
@@ -24,14 +38,15 @@ export default function BlockCard({ children, style, imageStyle, item }) {
           highest-quality apps for every Android device.
         </SubTitle> */}
 
-        <Title numberOfLines={2} size={18}>
-          {title}
-        </Title>
-        <SubTitle numberOfLines={3} size={15}>
-          {desc}
-        </SubTitle>
+          <Title numberOfLines={2} size={18}>
+            {title}
+          </Title>
+          <SubTitle numberOfLines={3} size={15}>
+            {desc}
+          </SubTitle>
+        </View>
       </View>
-    </View>
+    </TouchableWithoutFeedback>
   );
 }
 

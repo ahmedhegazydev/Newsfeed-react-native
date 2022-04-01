@@ -25,6 +25,17 @@ export default function HomeScreen({ navigation }) {
       screenOptions={
         {
           // headerShown: false
+          // headeTransparent: true,
+          // headerTitle: "",
+          // headerTintColor: "white",
+          // headerLeftContainerStyle: {
+          //   width: 40,
+          //   height: 40,
+          //   borderRadius: 20,
+          //   backgroundColor: "rgba(92, 90, 91, 0.7)",
+          //   alignItems: "center",
+          //   marginLeft: 10,
+          // },
         }
       }
     >
