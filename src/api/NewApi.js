@@ -7,7 +7,7 @@ const getAllNewsEverything = async () => {
       "/everything?domains=wsj.com&apiKey=3b677719d8794bdb91440e41130d9449";
     const response = await apiClient.get(endpoint);
     // console.log(response);
-    // console.log(response.data.totalResults);
+    console.log(response.data.totalResults);
     // console.log(response.data.status);
     return response.data.articles;
   } catch (error) {

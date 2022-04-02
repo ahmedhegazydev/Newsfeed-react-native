@@ -29,7 +29,7 @@ export default function VerticalList({ title, data }) {
     //   .reverse()[0];
     setEverythingNews(allNewsEverything);
     setRefreshing(false);
-    console.log(allNewsEverything);
+    // console.log(allNewsEverything);
   };
   const onRefresh = React.useCallback(() => {
     setRefreshing(true);
@@ -37,6 +37,10 @@ export default function VerticalList({ title, data }) {
     filterMultipleNews();
     // setRefreshing(false);
   }, []);
+
+  useEffect(() => {
+    setEverythingNews(data);
+  });
 
   return (
     <View>
@@ -52,7 +56,7 @@ export default function VerticalList({ title, data }) {
         }
         style={styles.container}
       >
-        {data.map((item) => (
+        {newsEverything.map((item) => (
           <FlatCard
             onPress={() => {
               // console.log("onPress");
