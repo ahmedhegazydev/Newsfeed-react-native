@@ -41,6 +41,9 @@ export default function HomeScreen({ navigation }) {
     >
       <Stack.Screen name={LIST_ALL_NEWS_NAME} component={ListAllNewsScreen} />
       <Stack.Screen
+        screenOptions={{
+          headerShown: false,
+        }}
         name={MORE_DETAILS_NEWS_NAME}
         component={PreviewNewsDetailsScreen}
       />
