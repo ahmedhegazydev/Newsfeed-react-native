@@ -8,8 +8,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 // import { AsyncStorage } from "@react-native-async-storage/async-storage";
-import AsyncStorage from "@react-native-community/async-storage";
-// import { AsyncStorage } from "react-native";
+// import AsyncStorage from "@react-native-community/async-storage";
+import { AsyncStorage } from "react-native";
 
 import { KEY_STORE_LANGUAGE } from "../../constants/contants";
 
@@ -53,7 +53,6 @@ export default function SettingsScreen({ navigation }) {
     // let currrentLang = "Arabic";
     try {
       const value = await AsyncStorage.getItem(KEY_STORE_LANGUAGE);
-
       if (value !== null) {
         console.log(value);
         // console.log(Boolean(value));
