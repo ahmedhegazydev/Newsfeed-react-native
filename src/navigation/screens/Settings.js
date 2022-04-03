@@ -10,6 +10,7 @@ import {
 // import { AsyncStorage } from "@react-native-async-storage/async-storage";
 // import AsyncStorage from "@react-native-community/async-storage";
 import { AsyncStorage } from "react-native";
+import I18n from "react-native-i18n";
 
 import { KEY_STORE_LANGUAGE } from "../../constants/contants";
 
@@ -29,8 +30,10 @@ export default function SettingsScreen({ navigation }) {
       currrentLang = "";
       if (storedLang == "Arabic") {
         currrentLang = "English";
+        I18n.locale = "en-US";
       } else {
         currrentLang = "Arabic";
+        I18n.locale = "ar-US";
       }
       setLanguage(currrentLang);
       await AsyncStorage.setItem(KEY_STORE_LANGUAGE, currrentLang);

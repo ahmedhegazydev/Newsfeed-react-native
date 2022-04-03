@@ -5,20 +5,27 @@ import Screen from "./src/components/Screen.js";
 import SearchBar from "./src/components/SearchBar.js";
 import { Appearance } from "react-native";
 import MainContainer from "./src/navigation/MainContainer.js";
+import { store, persistor } from "./store";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 
 export default function App() {
   const [theme, setTheme] = useState(Appearance.getColorScheme());
-
+  state = { isReduxLoaded: false };
+  onBeforeLift = () => {
+    this.setState({ isReduxLoaded: true }, () => {});
+  };
   Appearance.addChangeListener((scheme) => {
     console.log(scheme.colorScheme);
   });
 
   return (
-    // <Screen>
-    /* <SearchBar /> */
-    <MainContainer />
-    // <BlockCard />
-    // </Screen>
+    <Provider store={store}>
+      <StatusBar barStyle="dark-content" />
+      <PersistGate onBeforeLift={this.onBeforeLift} persistor={persistor}>
+        <MainContainer />
+      </PersistGate>
+    </Provider>
   );
 }
 
