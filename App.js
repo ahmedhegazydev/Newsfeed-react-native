@@ -5,7 +5,7 @@ import Screen from "./src/components/Screen.js";
 import SearchBar from "./src/components/SearchBar.js";
 import { Appearance } from "react-native";
 import MainContainer from "./src/navigation/MainContainer.js";
-import { store, persistor } from "./store";
+import { store, persistor } from "./src/store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 

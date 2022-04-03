@@ -1,10 +1,11 @@
-import {createStore, applyMiddleware} from 'redux';
-import {persistStore, persistReducer} from 'redux-persist';
-import createSagaMiddleware from 'redux-saga';
-import {createLogger} from 'redux-logger';
-import reducers from '../reducers';
-import rootSaga from '../sagas';
-import AsyncStorage from '@react-native-community/async-storage';
+import { createStore, applyMiddleware } from "redux";
+import { persistStore, persistReducer } from "redux-persist";
+import createSagaMiddleware from "redux-saga";
+import { createLogger } from "redux-logger";
+import reducers from "../reducers";
+import rootSaga from "../sagas";
+// import AsyncStorage from '@react-native-community/async-storage';
+import { AsyncStorage } from "react-native";
 
 const isDebuggingInChrome = __DEV__ && !!window.navigator.userAgent;
 
@@ -18,7 +19,7 @@ const logger = createLogger({
 
 /* redux persist config */
 const persistConfig = {
-  key: 'root',
+  key: "root",
   storage: AsyncStorage,
   whitelist: [],
 };
@@ -30,11 +31,11 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
   persistedReducer,
-  applyMiddleware(sagaMiddleware, logger),
+  applyMiddleware(sagaMiddleware, logger)
 );
 const persistor = persistStore(store);
 
 // run the saga
 sagaMiddleware.run(rootSaga);
 
-export {store, persistor};
+export { store, persistor };
