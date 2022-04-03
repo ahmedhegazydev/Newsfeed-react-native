@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { View, Text, StyleSheet, RefreshControl } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import FlatCard from "../cards/FlatCard";
-import Title from "../Title";
+import Title from "../common/Title";
 import { useNavigation } from "@react-navigation/native";
 import {
   LIST_ALL_NEWS_NAME,

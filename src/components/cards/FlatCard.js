@@ -8,8 +8,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
-import Title from "../Title";
-import SubTitle from "../SubTitle";
+import Title from "../common/Title";
+import SubTitle from "../common/SubTitle";
 
 export default function FlatCard({ item, onPress }) {
   const { urlToImage, title, description } = item;

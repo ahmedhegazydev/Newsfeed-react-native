@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+  TouchableOpacity,
+} from "react-native";
 import BlockCard from "./src/components/cards/BlockCard.js";
 import Screen from "./src/components/Screen.js";
 import SearchBar from "./src/components/SearchBar.js";
@@ -12,9 +18,9 @@ import { PersistGate } from "redux-persist/integration/react";
 export default function App() {
   const [theme, setTheme] = useState(Appearance.getColorScheme());
   state = { isReduxLoaded: false };
-  onBeforeLift = () => {
-    this.setState({ isReduxLoaded: true }, () => {});
-  };
+  // onBeforeLift = () => {
+  //   this.setState({ isReduxLoaded: true }, () => {});
+  // };
   Appearance.addChangeListener((scheme) => {
     console.log(scheme.colorScheme);
   });

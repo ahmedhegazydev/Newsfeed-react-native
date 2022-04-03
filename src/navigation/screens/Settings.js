@@ -31,6 +31,7 @@ export default function SettingsScreen({ navigation }) {
       if (storedLang == "Arabic") {
         currrentLang = "English";
         I18n.locale = "en-US";
+        // this.props.generalActions;
       } else {
         currrentLang = "Arabic";
         I18n.locale = "ar-US";
