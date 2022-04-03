@@ -4219,6 +4219,16 @@
   "resolved" "https://registry.npmjs.org/i18n-js/-/i18n-js-3.0.11.tgz"
   "version" "3.0.11"
 
+"i18next-react-native-language-detector@^1.0.2":
+  "integrity" "sha1-XEdIJhGkQmIwKjY9W+NKQrEd38Y="
+  "resolved" "https://registry.npmjs.org/i18next-react-native-language-detector/-/i18next-react-native-language-detector-1.0.2.tgz"
+  "version" "1.0.2"
+
+"i18next@^3.0.0":
+  "integrity" "sha1-kwOQ1cMYzqpIWLUt0OQOayA/n0E="
+  "resolved" "https://registry.npmjs.org/i18next/-/i18next-3.5.2.tgz"
+  "version" "3.5.2"
+
 "iconv-lite@^0.6.2":
   "integrity" "sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw=="
   "resolved" "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.3.tgz"
@@ -6700,6 +6710,11 @@
   "version" "2.0.15"
   dependencies:
     "i18n-js" "3.0.11"
+
+"react-native-locale-detector@^1.0.0":
+  "integrity" "sha1-wAImHstgYZ5ZUiV8jH+jHCwV7TA="
+  "resolved" "https://registry.npmjs.org/react-native-locale-detector/-/react-native-locale-detector-1.0.1.tgz"
+  "version" "1.0.1"
 
 "react-native-localization@^2.3.1":
   "integrity" "sha512-jmD6GEAGmstCIZOsxZcxWJbbx364c9qtKy8kefLcHYfAc73+g+e8CB7TZEwpK4IZNXxCBAeQMBsXfFrTyJmpWQ=="
