@@ -9,7 +9,7 @@ import {
 import { ScrollView, TextInput } from "react-native-gesture-handler";
 import FlatCard from "../cards/FlatCard";
 import { useNavigation } from "@react-navigation/native";
-import { MORE_DETAILS_NEWS_NAME } from "../../constants/contants";
+import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";
 
 const { height } = Dimensions.get("window");
 
@@ -41,8 +41,6 @@ const SearchModel = ({ visible, data, notFound }) => {
         {data.map((item) => (
           <FlatCard
             onPress={() => {
-              // console.log("onPress");
-              // navigation.navigate(LIST_ALL_NEWS_NAME, { item });
               navigation.push(MORE_DETAILS_NEWS_NAME, { item });
             }}
             item={item}

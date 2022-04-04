@@ -7,7 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 import {
   LIST_ALL_NEWS_NAME,
   MORE_DETAILS_NEWS_NAME,
-} from "../../constants/contants";
+} from "../../constants/constants";
 import useNews from "../../hooks/useNews";
 import newsApi from "../../api/NewApi";
 
@@ -17,25 +17,20 @@ const wait = (timeout) => {
 
 export default function VerticalList({ title, data }) {
   const navigation = useNavigation();
-  // const [allNewsEverything] = useNews();
+
   const [newsEverything, setEverythingNews] = useState([]);
   const [refreshing, setRefreshing] = React.useState(false);
   const [enablePTR, setEnablePTR] = React.useState(false);
 
   const filterMultipleNews = async () => {
     const allNewsEverything = await newsApi.getAllNewsEverything();
-    // const allFeaturedNews = allNewsEverything
-    //   .filter((item) => item.featured === "on")
-    //   .reverse()[0];
+
     setEverythingNews(allNewsEverything);
     setRefreshing(false);
-    // console.log(allNewsEverything);
   };
   const onRefresh = React.useCallback(() => {
     setRefreshing(true);
-    // wait(2000).then(() => setRefreshing(false));
     filterMultipleNews();
-    // setRefreshing(false);
   }, []);
 
   useEffect(() => {
@@ -44,7 +39,6 @@ export default function VerticalList({ title, data }) {
 
   return (
     <View>
-      {/* <Title>{title}</Title> */}
       <ScrollView
         // scrollEnabled={false}
         refreshControl={
@@ -59,8 +53,6 @@ export default function VerticalList({ title, data }) {
         {newsEverything.map((item) => (
           <FlatCard
             onPress={() => {
-              // console.log("onPress");
-              // navigation.navigate(LIST_ALL_NEWS_NAME, { item });
               navigation.push(MORE_DETAILS_NEWS_NAME, { item });
             }}
             item={item}

@@ -21,18 +21,10 @@ const styles = StyleSheet.create({
   titlelight: {
     fontWeight: "bold",
     color: "black",
-    // fontSize: size,
-    // backgroundColor: "white",
-    // borderRadius: 8,
-    // justifyConent: "center",
   },
   titledark: {
     fontWeight: "bold",
     color: "#F5F5F5",
-    // fontSize: size,
-    // backgroundColor: "white",
-    // borderRadius: 8,
-    // justifyConent: "center",
   },
   container: {},
 });

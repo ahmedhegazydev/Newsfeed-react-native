@@ -19,11 +19,7 @@ export default function FlatCard({ item, onPress }) {
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <View style={[styles.container, styles[`container${theme}`]]}>
-        <Image
-          // source={require("../assets/images/test.png")}
-          source={{ uri: urlToImage }}
-          style={styles.image}
-        />
+        <Image source={{ uri: urlToImage }} style={styles.image} />
         <View style={styles.contentContainer}>
           <Title numberOfLines={2} size={18}>
             {title}

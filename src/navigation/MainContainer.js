@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { HOME_NAME, SETTINGS_NAME } from "../constants/contants";
+import { HOME_NAME, SETTINGS_NAME } from "../constants/constants";
 import SettingsScreen from "./screens/Settings";
 import HomeScreen from "./screens/Home";
 import { LocalizationContext } from "../contexts/LocalizationContext";
@@ -32,22 +32,6 @@ function MainContainer() {
         initialRouteName={HOME_NAME}
         screenOptions={({ route }) => ({
           headerShown: false,
-          // tabBarIcon: ({ focused, color, size }) => {
-          //   let iconName;
-          //   let rn = route.name;
-
-          //   if (rn === HOME_NAME) {
-          //     iconName = focused ? "home" : "home-outline";
-          //   }
-          //   //  else if (rn === detailsName) {
-          //   //   iconName = focused ? 'list' : 'list-outline';}
-          //   else if (rn === SETTINGS_NAME) {
-          //     iconName = focused ? "settings" : "settings-outline";
-          //   }
-
-          //   // You can return any component that you like here!
-          //   return <Ionicons name={iconName} size={size} color={color} />;
-          // },
         })}
         tabBarOptions={{
           activeTintColor: "tomato",
@@ -56,9 +40,6 @@ function MainContainer() {
           style: { padding: 10, height: 70 },
         }}
       >
-        {/* <Tab.Screen name={HOME_NAME} component={HomeScreen} />
-        <Tab.Screen name={SETTINGS_NAME} component={SettingsScreen} /> */}
-
         <Tab.Screen
           options={{
             title: translate("home"),
@@ -71,17 +52,16 @@ function MainContainer() {
               />
             ),
           }}
-          name="Home"
+          name={HOME_NAME}
           component={HomeScreen}
         />
         <Tab.Screen
-          name="Settings"
+          name={SETTINGS_NAME}
           options={{
             title: translate("setting"),
             tabBarIcon: ({ focused, color, size }) => (
               <Icon
                 name="settings"
-                // type="material-community"
                 type="material"
                 color={focused ? Colors.primary : Colors.lightgrey}
                 size={24}

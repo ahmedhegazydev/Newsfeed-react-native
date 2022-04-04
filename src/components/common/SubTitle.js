@@ -19,20 +19,10 @@ export default function SubTitle({ children, numberOfLines = 2, size = 15 }) {
 }
 const styles = StyleSheet.create({
   titlelight: {
-    // fontWeight: "bold",
-    // fontSize: size,
-    // backgroundColor: "white",
-    // borderRadius: 8,
     color: "black",
-    // justifyConent: "center",
   },
   titledark: {
-    // fontWeight: "bold",
-    // fontSize: size,
-    // backgroundColor: "white",
-    // borderRadius: 8,
     color: "#707070",
-    // justifyConent: "center",
   },
   container: {},
 });

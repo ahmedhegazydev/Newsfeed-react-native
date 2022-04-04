@@ -14,14 +14,15 @@ import {
 
 import { createStackNavigator } from "@react-navigation/stack";
 import ListAllNewsScreen from "./ListAllNews";
-import {
-  LIST_ALL_NEWS_NAME,
-  MORE_DETAILS_NEWS_NAME,
-} from "../../constants/contants";
+
 import PreviewNewsDetailsScreen from "./PreviewNewsDetails";
 import { ThemeContext } from "../../util/ThemeManager";
 import { Link } from "@react-navigation/native";
 import { LocalizationContext } from "../../contexts/LocalizationContext";
+import {
+  LIST_ALL_NEWS_NAME,
+  MORE_DETAILS_NEWS_NAME,
+} from "../../constants/constants";
 const Stack = createStackNavigator();
 
 export default function HomeScreen({ navigation }) {
@@ -35,18 +36,6 @@ export default function HomeScreen({ navigation }) {
   return (
     <Stack.Navigator
       screenOptions={{
-        // headerShown: false
-        // headeTransparent: true,
-        // headerTitle: "",
-        // headerTintColor: "white",
-        // headerLeftContainerStyle: {
-        //   width: 40,
-        //   height: 40,
-        //   borderRadius: 20,
-        //   backgroundColor: "rgba(92, 90, 91, 0.7)",
-        //   alignItems: "center",
-        //   marginLeft: 10,
-        // },
         headerLeft: () => (
           <Button
             title="Deep Settings"
@@ -61,7 +50,6 @@ export default function HomeScreen({ navigation }) {
           <Button
             title={translate("toggle_theme")}
             onPress={() => {
-              // console.log("Toggle Theme");
               toggleTheme();
             }}
           />

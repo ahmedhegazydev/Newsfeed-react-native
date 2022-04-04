@@ -23,11 +23,7 @@ const PreviewNewsDetailsScreen = ({ route }) => {
 
   return (
     <ScrollView style={styles.container}>
-      <Image
-        // source={require("/Users/ahmedhegazy/Desktop/ReactNative-Apps/VOIS/Newsfeed/src/assets/images/test.png")}
-        source={{ uri: image }}
-        style={[styles.image]}
-      />
+      <Image source={{ uri: image }} style={[styles.image]} />
       <View style={styles.contentContainer}>
         <Text style={styles.title}>{title}</Text>
         <Hyperlink onPress={(url, text) => alert(url + ", " + text)}>
@@ -50,13 +46,7 @@ const PreviewNewsDetailsScreen = ({ route }) => {
 export default PreviewNewsDetailsScreen;
 
 const styles = StyleSheet.create({
-  container: {
-    // fontWeight: "bold",
-    // fontSize: size,
-    // backgroundColor: "white",
-    // borderRadius: 8,
-    // justifyConent: "center",
-  },
+  container: {},
   image: {
     width: width,
     height: height / 3,

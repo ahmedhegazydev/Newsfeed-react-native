@@ -14,10 +14,6 @@ export default function EverythingNews({ data }) {
 const styles = StyleSheet.create({
   title: {
     fontWeight: "bold",
-    // fontSize: size,
-    // backgroundColor: "white",
-    // borderRadius: 8,
-    // justifyConent: "center",
   },
   container: {},
 });

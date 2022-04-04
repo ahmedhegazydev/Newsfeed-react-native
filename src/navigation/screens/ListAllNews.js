@@ -23,17 +23,7 @@ export default function ListAllNewsScreen({ navigation }) {
   return (
     <ScrollView>
       <View style={styles.container}>
-        {/* <Text>List All News!</Text> */}
         <SearchBar />
-        {/* <DelayInput
-        value={value}
-        minLength={3}
-        inputRef={inputRef}
-        onChangeText={setValue}
-        delayTimeout={500}
-        style={{ margin: 10, height: 40, borderColor: "gray", borderWidth: 1 }}
-      />
-      <Text>value: {value}</Text> */}
         <EverythingNews data={allNewsEverything} />
       </View>
     </ScrollView>
@@ -42,10 +32,6 @@ export default function ListAllNewsScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    // marginTop: StatusBar.currentHeight,
-    // paddingHorizontal: 15,
-    // backgroundColor: "#f7f3f3",
-    // flex: 1,
     padding: 10,
   },
 });
