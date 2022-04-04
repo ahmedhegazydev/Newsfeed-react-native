@@ -9,8 +9,22 @@ import HomeScreen from "./screens/Home";
 const Tab = createBottomTabNavigator();
 
 function MainContainer() {
+  const config = {
+    screens: {
+      Settings: "settings",
+      MORE_DETAILS_NEWS_NAME: "details",
+      // screenB: "b",
+      // screenC: "c",
+    },
+  };
+
+  const linking = {
+    prefixes: ["myapp://"],
+    config,
+  };
+
   return (
-    <NavigationContainer>
+    <NavigationContainer linking={linking}>
       <Tab.Navigator
         initialRouteName={HOME_NAME}
         screenOptions={({ route }) => ({

@@ -8,6 +8,7 @@ import {
   useColorScheme,
   View,
   Button,
+  Linking,
   TouchableOpacity,
 } from "react-native";
 
@@ -19,10 +20,15 @@ import {
 } from "../../constants/contants";
 import PreviewNewsDetailsScreen from "./PreviewNewsDetails";
 import { ThemeContext } from "../../util/ThemeManager";
+import { Link } from "@react-navigation/native";
 const Stack = createStackNavigator();
 
 export default function HomeScreen({ navigation }) {
   const { toggleTheme } = React.useContext(ThemeContext);
+
+  const Url_Settings = "myapp://settings";
+  // const Url_Details = `myapp://${MORE_DETAILS_NEWS_NAME}`;
+  const Url_Details = "myapp://details";
 
   return (
     <Stack.Navigator
@@ -39,7 +45,16 @@ export default function HomeScreen({ navigation }) {
         //   alignItems: "center",
         //   marginLeft: 10,
         // },
-        headerLeft: () => <Button title="Left" />,
+        headerLeft: () => (
+          <Button
+            title="Depp Settings"
+            onPress={() => {
+              // console.log("Depp Settings");
+              // Linking.openURL(Url_Settings);
+              Linking.openURL(Url_Details);
+            }}
+          />
+        ),
         headerRight: () => (
           <Button
             title="Toggle Theme"
