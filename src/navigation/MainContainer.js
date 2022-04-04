@@ -26,7 +26,7 @@ function MainContainer() {
     screens: {
       Settings: "settings",
       MORE_DETAILS_NEWS_NAME: "details",
-      screenB: "b",
+      WallStreetJournal: "allNews",
       // screenC: "c",
     },
   };

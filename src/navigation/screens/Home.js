@@ -31,6 +31,8 @@ export default function HomeScreen({ navigation }) {
   const Url_Settings = "myapp://settings";
   // const Url_Details = `myapp://${MORE_DETAILS_NEWS_NAME}`;
   const Url_Details = "myapp://details";
+  const Url_All_News = "myapp://allNews";
+
   const { translate } = useContext(LocalizationContext);
 
   return (
@@ -42,8 +44,9 @@ export default function HomeScreen({ navigation }) {
             title="Deep Settings"
             onPress={() => {
               // console.log("Depp Settings");
-              Linking.openURL(Url_Settings);
+              // Linking.openURL(Url_Settings);
               // Linking.openURL(Url_Details);
+              Linking.openURL(Url_All_News);
             }}
           />
         ),
@@ -58,12 +61,12 @@ export default function HomeScreen({ navigation }) {
       }}
     >
       <Stack.Screen
-        options={({ route }) => ({ title: "Wall Street Journal" })}
+        options={({ route }) => ({ title: "Wall Street" })}
         name={LIST_ALL_NEWS_NAME}
         component={ListAllNewsScreen}
       />
       <Stack.Screen
-        options={({ route }) => ({ title: "" })}
+        options={({ route }) => ({ title: "More Details" })}
         add
         name={MORE_DETAILS_NEWS_NAME}
         component={PreviewNewsDetailsScreen}

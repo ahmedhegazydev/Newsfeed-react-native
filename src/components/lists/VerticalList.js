@@ -24,13 +24,13 @@ export default function VerticalList({ title, data }) {
 
   const filterMultipleNews = async () => {
     const allNewsEverything = await newsApi.getAllNewsEverything();
-
     setEverythingNews(allNewsEverything);
     setRefreshing(false);
   };
   const onRefresh = React.useCallback(() => {
-    setRefreshing(true);
-    filterMultipleNews();
+    console.log("onRefresh");
+    // setRefreshing(true);
+    // filterMultipleNews();
   }, []);
 
   useEffect(() => {
