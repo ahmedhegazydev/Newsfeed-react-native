@@ -14,7 +14,7 @@ import MainContainer from "./src/navigation/MainContainer.js";
 import { store, persistor } from "./src/store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import { ThemeProvider } from "./src/util/ThemeManager.js";
+import { ThemeProvider, ThemeContext } from "./src/util/ThemeManager.js";
 
 export default function App() {
   const [theme, setTheme] = useState(Appearance.getColorScheme());

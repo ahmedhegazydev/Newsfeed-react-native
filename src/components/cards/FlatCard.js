@@ -18,22 +18,13 @@ export default function FlatCard({ item, onPress }) {
 
   return (
     <TouchableWithoutFeedback onPress={onPress}>
-      <View style={styles.container}>
+      <View style={[styles.container, styles[`container${theme}`]]}>
         <Image
           // source={require("../assets/images/test.png")}
           source={{ uri: urlToImage }}
           style={styles.image}
         />
         <View style={styles.contentContainer}>
-          {/* <Title numberOfLines={2} size={18}>
-          Everything you need to build on Android
-        </Title>
-        <SubTitle numberOfLines={3} size={15}>
-          Android Studio is Android's official IDE. It is purpose-built for
-          Android to accelerate your development and help you build the
-          highest-quality apps for every Android device.
-        </SubTitle> */}
-
           <Title numberOfLines={2} size={18}>
             {title}
           </Title>
@@ -47,12 +38,22 @@ export default function FlatCard({ item, onPress }) {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  containerlight: {
     // width: "100%",
     height: 80,
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "white",
+    borderRadius: 8,
+    overflow: "hidden",
+    marginBottom: 10,
+  },
+  containerdark: {
+    // width: "100%",
+    height: 80,
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#282828",
     borderRadius: 8,
     overflow: "hidden",
     marginBottom: 10,

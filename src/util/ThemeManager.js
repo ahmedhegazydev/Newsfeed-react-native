@@ -8,8 +8,10 @@ export const ThemeProvider = ({ children }) => {
   const toggleTheme = () => {
     if (theme == "light") {
       setTheme("dark");
+      console.log("dark");
     } else {
       setTheme("light");
+      console.log("light");
     }
   };
 

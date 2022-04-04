@@ -44,7 +44,8 @@ export default function HomeScreen({ navigation }) {
           <Button
             title="Toggle Theme"
             onPress={() => {
-              console.log("Toggle Theme");
+              // console.log("Toggle Theme");
+              toggleTheme();
             }}
           />
         ),
