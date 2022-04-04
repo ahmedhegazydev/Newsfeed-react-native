@@ -14,24 +14,34 @@ import MainContainer from "./src/navigation/MainContainer.js";
 import { store, persistor } from "./src/store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
+import { ThemeProvider } from "./src/util/ThemeManager.js";
 
 export default function App() {
   const [theme, setTheme] = useState(Appearance.getColorScheme());
-  state = { isReduxLoaded: false };
-  // onBeforeLift = () => {
-  //   this.setState({ isReduxLoaded: true }, () => {});
-  // };
+  // state = { isReduxLoaded: false };
+  const [reduxLoaded, setReduxLoaded] = useState(false);
+
+  onBeforeLift = () => {
+    // this.setState({ isReduxLoaded: true }, () => {});
+    setReduxLoaded(true);
+  };
   Appearance.addChangeListener((scheme) => {
     console.log(scheme.colorScheme);
   });
 
+  // return (
+  //   <Provider store={store}>
+  //     <StatusBar barStyle="dark-content" />
+  //     <PersistGate onBeforeLift={this.onBeforeLift} persistor={persistor}>
+  //       <MainContainer />
+  //     </PersistGate>
+  //   </Provider>
+  // );
+
   return (
-    <Provider store={store}>
-      <StatusBar barStyle="dark-content" />
-      <PersistGate onBeforeLift={this.onBeforeLift} persistor={persistor}>
-        <MainContainer />
-      </PersistGate>
-    </Provider>
+    <ThemeProvider>
+      <MainContainer />
+    </ThemeProvider>
   );
 }
 

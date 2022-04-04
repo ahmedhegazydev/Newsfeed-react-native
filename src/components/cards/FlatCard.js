@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import {
   StyleSheet,
   Text,
@@ -10,9 +10,11 @@ import {
 import { TextInput } from "react-native-gesture-handler";
 import Title from "../common/Title";
 import SubTitle from "../common/SubTitle";
+import { ThemeProvider, ThemeContext } from "../../util/ThemeManager";
 
 export default function FlatCard({ item, onPress }) {
   const { urlToImage, title, description } = item;
+  const { theme } = React.useContext(ThemeContext);
 
   return (
     <TouchableWithoutFeedback onPress={onPress}>

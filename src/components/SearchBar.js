@@ -28,7 +28,6 @@ export default function SearchBar({ setSearchFocused }) {
     const { text } = nativeEvent;
     setQuery(text);
     setVisible(true);
-    // handleSearch(query);
     debounceSearch(query);
   };
 

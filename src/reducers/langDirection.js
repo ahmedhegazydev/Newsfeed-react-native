@@ -1,8 +1,9 @@
-import * as types from '../actions/ActionTypes';
+import * as types from "../actions/ActionTypes";
 
 const initialState = {
   rtl: false,
-  lang: 'en-US',
+  // lang: 'en-US',
+  lang: "ar-US",
 };
 
 export default (state: Object = initialState, action: Object) => {
