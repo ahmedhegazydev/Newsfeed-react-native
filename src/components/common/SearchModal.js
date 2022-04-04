@@ -13,7 +13,7 @@ import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";
 
 const { height } = Dimensions.get("window");
 
-const SearchModel = ({ visible, data, notFound }) => {
+const SearchModal = ({ visible, data, notFound }) => {
   const navigation = useNavigation();
 
   if (!visible) return null;
@@ -51,7 +51,7 @@ const SearchModel = ({ visible, data, notFound }) => {
     </View>
   );
 };
-export default SearchModel;
+export default SearchModal;
 
 const styles = StyleSheet.create({
   container: {

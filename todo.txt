@@ -1,7 +1,8 @@
 - Fixing rfersh control
 - Fixing Delay input last char - low
 - Fixing hiding modal seach when empty - low
+- »Animation of lottie view not shown
 
 - Running on android 
 - Fixing deep linking for details screen 
-- passing id to link 
+- passing id to link  

@@ -12,21 +12,25 @@ import newsApi from "../../api/NewApi";
 import EverythingNews from "../../components/NewsEverything";
 import useNews from "../../hooks/useNews";
 import { ScrollView } from "react-native-gesture-handler";
+import ActivityIndicator from "../../components/common/ActivityIndicator";
 // import DelayInput from "react-native-debounce-input";
 
 export default function ListAllNewsScreen({ navigation }) {
-  const [allNewsEverything] = useNews();
+  const [allNewsEverything, loading] = useNews();
   const [value, setValue] = useState("Have");
   const inputRef = createRef();
   const [searchFocused, setSearchFocused] = useState(false);
 
   return (
-    <ScrollView>
-      <View style={styles.container}>
-        <SearchBar />
-        <EverythingNews data={allNewsEverything} />
-      </View>
-    </ScrollView>
+    <>
+      <ScrollView>
+        <View style={styles.container}>
+          <SearchBar />
+          <EverythingNews data={allNewsEverything} />
+        </View>
+      </ScrollView>
+      <ActivityIndicator visible={loading} />
+    </>
   );
 }
 

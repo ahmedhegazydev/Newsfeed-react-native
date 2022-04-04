@@ -1,8 +1,8 @@
 import React, { useState, useEffect, createRef } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
-import SearchModel from "./common/SearchModel";
 import newsApi from "../api/NewApi";
+import SearchModal from "./common/SearchModal";
 
 let timeoutId;
 
@@ -19,7 +19,6 @@ export default function SearchBar({ setSearchFocused }) {
   const [query, setQuery] = useState();
   const [data, setData] = useState([]);
   const [visible, setVisible] = useState(false);
-  // const [searchFocused, setSearchFocused] = useState(false);
 
   const [notFound, setNotFound] = useState("");
 
@@ -32,10 +31,8 @@ export default function SearchBar({ setSearchFocused }) {
   };
 
   const handleSearch = async (value) => {
-    // console.log(value);
     const articles = await newsApi.searchNews(value);
-    // console.log(articles[0].author);
-    // console.log("articles == " + articles);
+
     if (articles) {
       setData(articles);
       setNotFound("");
@@ -55,11 +52,8 @@ export default function SearchBar({ setSearchFocused }) {
           style={styles.searchInput}
           placeholder="Search here..."
           onChange={handleChange}
-          onFocus={() => {
-            // setSearchFocused(true);
-          }}
+          onFocus={() => {}}
           onBlur={() => {
-            // setSearchFocused(false);
             setVisible(false);
             setQuery("");
             setData([]);
@@ -67,8 +61,7 @@ export default function SearchBar({ setSearchFocused }) {
           }}
         />
       </View>
-      <SearchModel visible={visible} data={data} notFound={notFound} />
-      {/* <SearchModel visible={visible} data={[]} notFound={"No match found .."} /> */}
+      <SearchModal visible={visible} data={data} notFound={notFound} />
     </>
   );
 }
