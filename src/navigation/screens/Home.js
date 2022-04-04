@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
   SafeAreaView,
   ScrollView,
@@ -21,6 +21,7 @@ import {
 import PreviewNewsDetailsScreen from "./PreviewNewsDetails";
 import { ThemeContext } from "../../util/ThemeManager";
 import { Link } from "@react-navigation/native";
+import { LocalizationContext } from "../../contexts/LocalizationContext";
 const Stack = createStackNavigator();
 
 export default function HomeScreen({ navigation }) {
@@ -29,6 +30,7 @@ export default function HomeScreen({ navigation }) {
   const Url_Settings = "myapp://settings";
   // const Url_Details = `myapp://${MORE_DETAILS_NEWS_NAME}`;
   const Url_Details = "myapp://details";
+  const { translate } = useContext(LocalizationContext);
 
   return (
     <Stack.Navigator
@@ -47,7 +49,7 @@ export default function HomeScreen({ navigation }) {
         // },
         headerLeft: () => (
           <Button
-            title="Depp Settings"
+            title="Deep Settings"
             onPress={() => {
               // console.log("Depp Settings");
               // Linking.openURL(Url_Settings);
@@ -57,7 +59,7 @@ export default function HomeScreen({ navigation }) {
         ),
         headerRight: () => (
           <Button
-            title="Toggle Theme"
+            title={translate("toggle_theme")}
             onPress={() => {
               // console.log("Toggle Theme");
               toggleTheme();

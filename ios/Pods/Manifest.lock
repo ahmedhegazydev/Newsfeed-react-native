@@ -363,6 +363,8 @@ PODS:
     - React-Core
   - RNI18n (2.0.15):
     - React
+  - RNLocalize (2.2.1):
+    - React-Core
   - RNReanimated (2.5.0):
     - DoubleConversion
     - FBLazyVector
@@ -462,6 +464,7 @@ DEPENDENCIES:
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNI18n (from `../node_modules/react-native-i18n`)
+  - RNLocalize (from `../node_modules/react-native-localize`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
@@ -558,6 +561,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-gesture-handler"
   RNI18n:
     :path: "../node_modules/react-native-i18n"
+  RNLocalize:
+    :path: "../node_modules/react-native-localize"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
@@ -617,6 +622,7 @@ SPEC CHECKSUMS:
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
   RNGestureHandler: 6e757e487a4834e7280e98e9bac66d2d9c575e9c
   RNI18n: e2f7e76389fcc6e84f2c8733ea89b92502351fd8
+  RNLocalize: cbcb55d0e19c78086ea4eea20e03fe8000bbbced
   RNReanimated: 61f7efddd08550ffa5dee90021a157cd6e7c82fb
   RNScreens: 40a2cb40a02a609938137a1e0acfbf8fc9eebf19
   RNVectorIcons: 7923e585eaeb139b9f4531d25a125a1500162a0b
@@ -624,6 +630,6 @@ SPEC CHECKSUMS:
   Yoga: 6671cf077f614314c22fd09ddf87d7abeee64e96
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 8a158989cb18c3d4eda98ed25fad73429e20f7b9
+PODFILE CHECKSUM: 9afedecbc3fc5d1fb5bc9ad3a04d9337566fe07a
 
 COCOAPODS: 1.11.3

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
   StyleSheet,
   Text,
@@ -11,8 +11,10 @@ import {
 // import AsyncStorage from "@react-native-community/async-storage";
 import { AsyncStorage } from "react-native";
 import I18n from "react-native-i18n";
+import { CHANGE_DIRECTION } from "../../actions/ActionTypes";
 
 import { KEY_STORE_LANGUAGE } from "../../constants/contants";
+import { LocalizationContext } from "../../contexts/LocalizationContext";
 
 export default function SettingsScreen({ navigation }) {
   const toggleSwtich = () => {
@@ -30,11 +32,20 @@ export default function SettingsScreen({ navigation }) {
       currrentLang = "";
       if (storedLang == "Arabic") {
         currrentLang = "English";
-        I18n.locale = "en-US";
-        // this.props.generalActions;
+        // I18n.locale = "en-US";
+        // this.props.generalActions(CHANGE_DIRECTION, {
+        //   RTL: false,
+        //   lang: "en-US",
+        // });
+        changeLanguage("en");
       } else {
         currrentLang = "Arabic";
-        I18n.locale = "ar-US";
+        // I18n.locale = "ar-US";
+        // this.props.generalActions(CHANGE_DIRECTION, {
+        //   RTL: false,
+        //   lang: "ar-US",
+        // });
+        changeLanguage("ar");
       }
       setLanguage(currrentLang);
       await AsyncStorage.setItem(KEY_STORE_LANGUAGE, currrentLang);
@@ -42,6 +53,11 @@ export default function SettingsScreen({ navigation }) {
       // Error saving data
       console.log("error _storeData" + error);
     }
+  };
+  const { locale, setLocale } = useContext(LocalizationContext);
+
+  const changeLanguage = (lang) => {
+    setLocale(lang);
   };
 
   // useEffect(() => {
@@ -58,7 +74,7 @@ export default function SettingsScreen({ navigation }) {
     try {
       const value = await AsyncStorage.getItem(KEY_STORE_LANGUAGE);
       if (value !== null) {
-        console.log(value);
+        // console.log(value);
         // console.log(Boolean(value));
         // setIsEnabled(JSON.parse(value));
         // if (value === "true") {
