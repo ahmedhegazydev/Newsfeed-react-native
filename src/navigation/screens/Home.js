@@ -36,13 +36,14 @@ export default function HomeScreen({ navigation }) {
   return (
     <Stack.Navigator
       screenOptions={{
+        // headerShown: false,
         headerLeft: () => (
           <Button
             title="Deep Settings"
             onPress={() => {
               // console.log("Depp Settings");
-              // Linking.openURL(Url_Settings);
-              Linking.openURL(Url_Details);
+              Linking.openURL(Url_Settings);
+              // Linking.openURL(Url_Details);
             }}
           />
         ),
@@ -56,11 +57,14 @@ export default function HomeScreen({ navigation }) {
         ),
       }}
     >
-      <Stack.Screen name={LIST_ALL_NEWS_NAME} component={ListAllNewsScreen} />
       <Stack.Screen
-        screenOptions={{
-          headerShown: false,
-        }}
+        options={({ route }) => ({ title: "Wall Street Journal" })}
+        name={LIST_ALL_NEWS_NAME}
+        component={ListAllNewsScreen}
+      />
+      <Stack.Screen
+        options={({ route }) => ({ title: "" })}
+        add
         name={MORE_DETAILS_NEWS_NAME}
         component={PreviewNewsDetailsScreen}
       />
