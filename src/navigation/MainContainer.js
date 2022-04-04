@@ -25,9 +25,10 @@ function MainContainer() {
   const config = {
     screens: {
       Settings: "settings",
-      MORE_DETAILS_NEWS_NAME: "details",
-      WallStreetJournal: "allNews",
+      Home: "home",
+      ScreenDetails: "home/allNews/details",
       // screenC: "c",
+      WallStreetJournal: "home/allNews",
     },
   };
 

@@ -46,7 +46,7 @@ export default function HomeScreen({ navigation }) {
               // console.log("Depp Settings");
               // Linking.openURL(Url_Settings);
               // Linking.openURL(Url_Details);
-              Linking.openURL(Url_All_News);
+              // Linking.openURL(Url_All_News);
             }}
           />
         ),

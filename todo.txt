@@ -1,0 +1,7 @@
+- Fixing rfersh control
+- Fixing Delay input last char - low
+- Fixing hiding modal seach when empty - low
+
+- Running on android 
+- Fixing deep linking for details screen 
+- passing id to link 
