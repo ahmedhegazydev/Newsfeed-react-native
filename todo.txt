@@ -1,11 +1,11 @@
-- Fixing Delay input last char - low
-- Fixing hiding modal seach when empty - low
+- Fixing Delay input last char - low - done
+- Fixing hiding modal seach when empty - low - done
 - Animation of lottie view not shown
-- Supporting errror into the api
+- Supporting errror into the api - done
 
 
 - Fixing rfersh control - done
 - Running on android 
 - Runnning Deep linking nav detail/settings on android
-- Fixing deep linking for details screen 
-- passing id to link  
+- Fixing deep linking for details screen  - done
+- passing id to link  - done
