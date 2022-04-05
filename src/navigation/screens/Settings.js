@@ -20,10 +20,10 @@ export default function SettingsScreen({ navigation }) {
       currrentLang = "";
       if (storedLang == "Arabic") {
         currrentLang = "English";
-        changeLanguage("en");
+        changeLanguage("ar");
       } else {
         currrentLang = "Arabic";
-        changeLanguage("ar");
+        changeLanguage("en");
       }
       setLanguage(currrentLang);
       await AsyncStorage.setItem(KEY_STORE_LANGUAGE, currrentLang);
@@ -42,19 +42,20 @@ export default function SettingsScreen({ navigation }) {
   });
 
   const _retrieveData = async () => {
-    let enabling = false;
-    // let currrentLang = "Arabic";
     try {
       const value = await AsyncStorage.getItem(KEY_STORE_LANGUAGE);
       if (value !== null) {
         setLanguage(value);
+        if (value == "Arabic") {
+          setLocale("en");
+        } else {
+          setLocale("ar");
+        }
         storedLang = value;
       }
     } catch (error) {
-      // Error retrieving data
       console.log("error _retrieveData" + error);
     }
-    // return enabling;
     return storedLang;
   };
 
