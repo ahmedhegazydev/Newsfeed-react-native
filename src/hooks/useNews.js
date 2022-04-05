@@ -15,11 +15,18 @@ export default useNews = () => {
 
   const filterMultipleNews = async () => {
     setLoading(true);
-    const allNewsEverything = await newsApi.getAllNewsEverything();
+    const { data: allNewsEverything, error } =
+      await newsApi.getAllNewsEverything();
 
     setEverythingNews(allNewsEverything);
     console.log(allNewsEverything);
-    setLoading(false);
+    if (!error) {
+      setLoading(false);
+    }
+
+    for (var i = 0; i < allNewsEverything.size; i++) {
+      allNewsEverything[i].id = i;
+    }
   };
 
   useEffect(() => {

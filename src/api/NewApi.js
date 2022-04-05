@@ -6,7 +6,7 @@ const getAllNewsEverything = async () => {
     const endpoint =
       "/everything?domains=wsj.com&apiKey=3b677719d8794bdb91440e41130d9449";
     const response = await apiClient.get(endpoint);
-    return response.data.articles;
+    return { data: response.data.articles, error: "" };
   } catch (error) {
     if (error.response) {
       console.log(error.response.data);
@@ -15,7 +15,7 @@ const getAllNewsEverything = async () => {
     } else {
       console.log("Errror while getting all everything news ", error.message);
     }
-    return [];
+    return { data: [], error: error };
   }
 };
 

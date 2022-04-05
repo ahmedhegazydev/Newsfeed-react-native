@@ -21,14 +21,43 @@ import {
   Alert,
   TouchableOpacity,
 } from "react-native";
+
 function MainContainer() {
   const config = {
     screens: {
       Settings: "settings",
-      Home: "home",
-      ScreenDetails: "home/allNews/details",
-      // screenC: "c",
-      WallStreetJournal: "home/allNews",
+      Home: {
+        screens: {
+          ListAllNews: {
+            //myapp://app/allNews
+            // path: "allNews",
+            path: "allNews/:id",
+            // parse: {
+            //   id: (id) => `user-${id}`,
+            // },
+            // stringify: {
+            //   id: (id) => id.replace(/^user-/, ''),
+            // },
+          },
+          NewsDetails: {
+            ///myapp://app/details/33
+            path: "details/:id",
+            // parse: {
+            //   id: (id) => `user-${id}`,
+            // },
+            // stringify: {
+            //   id: (id) => id.replace(/^user-/, ""),
+            // },
+          },
+        },
+      },
+      // ScreenDetails: "home/allNews/details",
+      // WallStreetJournal: {
+      //   path: "home/allNews/:token",
+      //   params: {
+      //     token: null,
+      //   },
+      // },
     },
   };
 
