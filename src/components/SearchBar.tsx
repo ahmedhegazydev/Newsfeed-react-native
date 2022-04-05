@@ -2,6 +2,7 @@ import React, { useState, useEffect, createRef } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import newsApi from "../api/NewApi";
+import { New } from "../data/New";
 import SearchModal from "./common/SearchModal";
 
 let timeoutId: any;
@@ -17,7 +18,7 @@ const debounce = (func: any, delay: any) => {
 
 export default function SearchBar({ setSearchFocused }) {
   const [query, setQuery] = useState<string>("");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<New[] | null>([]);
   const [visible, setVisible] = useState<boolean>(false);
 
   const [notFound, setNotFound] = useState<string>("");

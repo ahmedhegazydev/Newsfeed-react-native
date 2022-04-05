@@ -1,9 +1,15 @@
-import * as React from "react";
+import React, {
+  useState,
+  useContext,
+  useEffect,
+  createRef,
+  useRef,
+} from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { ThemeProvider, ThemeContext } from "../../util/ThemeManager";
 
 export default function Title({ children, numberOfLines = 2, size = 18 }) {
-  const { theme } = React.useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <View style={styles.container}>

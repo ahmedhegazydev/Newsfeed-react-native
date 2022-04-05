@@ -14,7 +14,7 @@ import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";
 const { height } = Dimensions.get("window");
 
 const SearchModal = ({ visible, data, notFound }) => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigationProp<any>>();
 
   if (!visible) return null;
   if (visible && data.length === 0 && !notFound) return null;

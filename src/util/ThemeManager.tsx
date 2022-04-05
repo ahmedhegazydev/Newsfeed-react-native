@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState, useEffect, useContext, createContext } from "react";
 
-export const ThemeContext = React.createContext();
+export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = React.useState("light");
+  const [theme, setTheme] = useState<string>("light");
 
   const toggleTheme = () => {
     if (theme == "light") {

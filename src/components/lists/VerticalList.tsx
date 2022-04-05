@@ -7,10 +7,10 @@ import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";
 import newsApi from "../../api/NewApi";
 
 export default function VerticalList({ title, data }) {
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigationProp<any>>();
 
   const [newsEverything, setEverythingNews] = useState([]);
-  const [refreshing, setRefreshing] = React.useState<boolean>(false);
+  const [refreshing, setRefreshing] = useState<boolean>(false);
 
   const filterMultipleNews = async () => {
     setRefreshing(true);

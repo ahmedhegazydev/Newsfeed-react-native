@@ -1,4 +1,10 @@
-import React from "react";
+import React, {
+  useState,
+  useContext,
+  useEffect,
+  createRef,
+  useRef,
+} from "react";
 import {
   StyleSheet,
   Text,
@@ -13,7 +19,7 @@ import { ThemeProvider, ThemeContext } from "../../util/ThemeManager";
 
 export default function FlatCard({ item, onPress }) {
   const { urlToImage, title, description } = item;
-  const { theme } = React.useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <TouchableWithoutFeedback onPress={onPress}>

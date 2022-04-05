@@ -8,9 +8,10 @@ import {
   TouchableOpacity,
 } from "react-native";
 import newsApi from "../api/NewApi";
+import { New } from "../data/New";
 
 export default useNews = () => {
-  const [newsEverything, setEverythingNews] = useState([]);
+  const [newsEverything, setEverythingNews] = useState<New[] | null>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   const filterMultipleNews = async () => {
