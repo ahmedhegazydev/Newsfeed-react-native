@@ -13,6 +13,8 @@ import { ThemeProvider, ThemeContext } from "./src/util/ThemeManager.js";
 import * as RNLocalize from "react-native-localize";
 import i18n from "i18n-js";
 import { LocalizationContext } from "./src/contexts/LocalizationContext.js";
+import { AsyncStorage } from "react-native";
+import { KEY_STORE_LANGUAGE } from "./src/constants/constants.js";
 
 i18n.fallbacks = true;
 i18n.translations = {
@@ -46,6 +48,25 @@ export default function App() {
       RNLocalize.removeEventListener("change", handleLocalizationChange);
     };
   }, []);
+
+  useEffect(() => {
+    _retrieveData();
+  });
+
+  const _retrieveData = async () => {
+    try {
+      const value = await AsyncStorage.getItem(KEY_STORE_LANGUAGE);
+      if (value !== null) {
+        if (value == "Arabic") {
+          setLocale("en");
+        } else {
+          setLocale("ar");
+        }
+      }
+    } catch (error) {
+      console.log("error _retrieveData" + error);
+    }
+  };
 
   const handleLocalizationChange = () => {
     console.log("handleLocalizationChange");
