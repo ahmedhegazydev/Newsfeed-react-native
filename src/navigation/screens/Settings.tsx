@@ -33,7 +33,7 @@ export default function SettingsScreen({ navigation }) {
   };
   const { locale, setLocale } = useContext(LocalizationContext);
 
-  const changeLanguage = (lang) => {
+  const changeLanguage = (lang: string) => {
     setLocale(lang);
   };
 
@@ -59,7 +59,7 @@ export default function SettingsScreen({ navigation }) {
     return storedLang;
   };
 
-  const [selectedLang, setLanguage] = useState("English");
+  const [selectedLang, setLanguage] = useState<string>("English");
 
   return (
     <View style={styles.container}>

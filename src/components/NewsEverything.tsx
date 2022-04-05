@@ -1,6 +1,5 @@
 import * as React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import { TextInput } from "react-native-gesture-handler";
 import VerticalList from "./lists/VerticalList";
 
 export default function EverythingNews({ data }) {

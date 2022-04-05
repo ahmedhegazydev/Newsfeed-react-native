@@ -17,7 +17,6 @@ import ListAllNewsScreen from "./ListAllNews";
 
 import PreviewNewsDetailsScreen from "./PreviewNewsDetails";
 import { ThemeContext } from "../../util/ThemeManager";
-import { Link } from "@react-navigation/native";
 import { LocalizationContext } from "../../contexts/LocalizationContext";
 import {
   LIST_ALL_NEWS_NAME,
@@ -38,18 +37,6 @@ export default function HomeScreen({ navigation }) {
   return (
     <Stack.Navigator
       screenOptions={{
-        // headerShown: false,
-        // headerLeft: () => (
-        //   <Button
-        //     title="Deep Settings"
-        //     onPress={() => {
-        //       // console.log("Depp Settings");
-        //       // Linking.openURL(Url_Settings);
-        //       // Linking.openURL(Url_Details);
-        //       // Linking.openURL(Url_All_News);
-        //     }}
-        //   />
-        // ),
         headerRight: () => (
           <Button
             title={translate("toggle_theme")}

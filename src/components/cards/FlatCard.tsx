@@ -7,7 +7,6 @@ import {
   TouchableWithoutFeedback,
   TouchableOpacity,
 } from "react-native";
-import { TextInput } from "react-native-gesture-handler";
 import Title from "../common/Title";
 import SubTitle from "../common/SubTitle";
 import { ThemeProvider, ThemeContext } from "../../util/ThemeManager";
@@ -18,7 +17,7 @@ export default function FlatCard({ item, onPress }) {
 
   return (
     <TouchableWithoutFeedback onPress={onPress}>
-      <View style={[styles.container, styles[`container${theme}`]]}>
+      <View style={[styles.containerlight, styles[`container${theme}`]]}>
         <Image source={{ uri: urlToImage }} style={styles.image} />
         <View style={styles.contentContainer}>
           <Title numberOfLines={2} size={18}>

@@ -11,7 +11,7 @@ import newsApi from "../api/NewApi";
 
 export default useNews = () => {
   const [newsEverything, setEverythingNews] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
 
   const filterMultipleNews = async () => {
     setLoading(true);

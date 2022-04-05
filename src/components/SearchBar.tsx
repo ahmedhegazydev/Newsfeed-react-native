@@ -4,10 +4,10 @@ import { TextInput } from "react-native-gesture-handler";
 import newsApi from "../api/NewApi";
 import SearchModal from "./common/SearchModal";
 
-let timeoutId;
+let timeoutId: any;
 
-const debounce = (func, delay) => {
-  return (...args) => {
+const debounce = (func: any, delay: any) => {
+  return (...args: any[]) => {
     if (timeoutId) clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
       func.apply(null, args);
@@ -16,25 +16,24 @@ const debounce = (func, delay) => {
 };
 
 export default function SearchBar({ setSearchFocused }) {
-  const [query, setQuery] = useState();
+  const [query, setQuery] = useState<string>("");
   const [data, setData] = useState([]);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState<boolean>(false);
 
-  const [notFound, setNotFound] = useState("");
+  const [notFound, setNotFound] = useState<string>("");
 
   const handleChange = ({ nativeEvent }) => {
     const { text } = nativeEvent;
     setQuery(text);
     setVisible(true);
     debounceSearch(query);
-    // console.log(nativeEvent);
     console.log(text);
     if (text == "") {
       setVisible(false);
     }
   };
 
-  const handleSearch = async (value) => {
+  const handleSearch = async (value: string) => {
     const articles = await newsApi.searchNews(value);
 
     if (articles) {

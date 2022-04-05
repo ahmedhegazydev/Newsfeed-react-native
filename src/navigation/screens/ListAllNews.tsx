@@ -10,7 +10,6 @@ import {
   TouchableOpacity,
 } from "react-native";
 import SearchBar from "../../components/SearchBar";
-import newsApi from "../../api/NewApi";
 import EverythingNews from "../../components/NewsEverything";
 import useNews from "../../hooks/useNews";
 import ActivityIndicator from "../../components/common/ActivityIndicator";
@@ -19,18 +18,7 @@ import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";
 
 export default function ListAllNewsScreen({ route }) {
   const [allNewsEverything, loading] = useNews();
-  const [value, setValue] = useState("Have");
-  const inputRef = createRef();
-  const [searchFocused, setSearchFocused] = useState(false);
   const navigation = useNavigation();
-
-  // useEffect(() => {
-  // const { token } = navigation.params.token;
-  // console.log(token);
-  // Linking.getInitialURL().then((url) => {
-  //   console.log(`url`, url);
-  // });
-  // }, []);
 
   useEffect(() => {
     // const timeout = setTimeout(() => {

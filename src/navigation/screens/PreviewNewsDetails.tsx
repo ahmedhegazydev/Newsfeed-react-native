@@ -10,7 +10,6 @@ import {
   TouchableOpacity,
 } from "react-native";
 import Hyperlink from "react-native-hyperlink";
-import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";
 
 const { width, height } = Dimensions.get("window");
 

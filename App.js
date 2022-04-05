@@ -6,15 +6,14 @@ import {
   StatusBar,
   TouchableOpacity,
 } from "react-native";
-import SearchBar from "./src/components/SearchBar.js";
 import { Appearance } from "react-native";
-import MainContainer from "./src/navigation/MainContainer.js";
-import { ThemeProvider, ThemeContext } from "./src/util/ThemeManager.js";
+import MainContainer from "./src/navigation/MainContainer.tsx";
+import { ThemeProvider, ThemeContext } from "./src/util/ThemeManager.tsx";
 import * as RNLocalize from "react-native-localize";
 import i18n from "i18n-js";
-import { LocalizationContext } from "./src/contexts/LocalizationContext.js";
+import { LocalizationContext } from "./src/contexts/LocalizationContext.tsx";
 import { AsyncStorage } from "react-native";
-import { KEY_STORE_LANGUAGE } from "./src/constants/constants.js";
+import { KEY_STORE_LANGUAGE } from "./src/constants/constants.tsx";
 
 i18n.fallbacks = true;
 i18n.translations = {

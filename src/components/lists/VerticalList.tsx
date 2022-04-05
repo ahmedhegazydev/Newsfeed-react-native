@@ -2,24 +2,15 @@ import React, { useState, useEffect, useCallback } from "react";
 import { View, Text, StyleSheet, RefreshControl } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import FlatCard from "../cards/FlatCard";
-import Title from "../common/Title";
 import { useNavigation } from "@react-navigation/native";
-import {
-  LIST_ALL_NEWS_NAME,
-  MORE_DETAILS_NEWS_NAME,
-} from "../../constants/constants";
-import useNews from "../../hooks/useNews";
+import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";
 import newsApi from "../../api/NewApi";
-
-const wait = (timeout) => {
-  return new Promise((resolve) => setTimeout(resolve, timeout));
-};
 
 export default function VerticalList({ title, data }) {
   const navigation = useNavigation();
 
   const [newsEverything, setEverythingNews] = useState([]);
-  const [refreshing, setRefreshing] = React.useState(false);
+  const [refreshing, setRefreshing] = React.useState<boolean>(false);
 
   const filterMultipleNews = async () => {
     setRefreshing(true);
@@ -36,7 +27,6 @@ export default function VerticalList({ title, data }) {
   }, [refreshing]);
 
   useEffect(() => {
-    // console.log("useEffect");
     setEverythingNews(data);
   });
 
