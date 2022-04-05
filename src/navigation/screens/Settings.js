@@ -20,11 +20,9 @@ export default function SettingsScreen({ navigation }) {
       currrentLang = "";
       if (storedLang == "Arabic") {
         currrentLang = "English";
-
         changeLanguage("en");
       } else {
         currrentLang = "Arabic";
-
         changeLanguage("ar");
       }
       setLanguage(currrentLang);

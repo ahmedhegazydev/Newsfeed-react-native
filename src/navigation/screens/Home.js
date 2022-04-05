@@ -39,17 +39,17 @@ export default function HomeScreen({ navigation }) {
     <Stack.Navigator
       screenOptions={{
         // headerShown: false,
-        headerLeft: () => (
-          <Button
-            title="Deep Settings"
-            onPress={() => {
-              // console.log("Depp Settings");
-              // Linking.openURL(Url_Settings);
-              // Linking.openURL(Url_Details);
-              // Linking.openURL(Url_All_News);
-            }}
-          />
-        ),
+        // headerLeft: () => (
+        //   <Button
+        //     title="Deep Settings"
+        //     onPress={() => {
+        //       // console.log("Depp Settings");
+        //       // Linking.openURL(Url_Settings);
+        //       // Linking.openURL(Url_Details);
+        //       // Linking.openURL(Url_All_News);
+        //     }}
+        //   />
+        // ),
         headerRight: () => (
           <Button
             title={translate("toggle_theme")}
