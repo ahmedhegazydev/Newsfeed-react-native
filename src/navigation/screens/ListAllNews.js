@@ -23,12 +23,10 @@ export default function ListAllNewsScreen({ navigation }) {
 
   return (
     <>
-      <ScrollView>
-        <View style={styles.container}>
-          <SearchBar />
-          <EverythingNews data={allNewsEverything} />
-        </View>
-      </ScrollView>
+      <View style={styles.container}>
+        <SearchBar />
+        <EverythingNews data={allNewsEverything} />
+      </View>
       <ActivityIndicator visible={loading} />
     </>
   );

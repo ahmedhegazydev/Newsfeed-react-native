@@ -20,7 +20,6 @@ export default function VerticalList({ title, data }) {
 
   const [newsEverything, setEverythingNews] = useState([]);
   const [refreshing, setRefreshing] = React.useState(false);
-  const [enablePTR, setEnablePTR] = React.useState(false);
 
   const filterMultipleNews = async () => {
     const allNewsEverything = await newsApi.getAllNewsEverything();
@@ -29,38 +28,39 @@ export default function VerticalList({ title, data }) {
   };
   const onRefresh = React.useCallback(() => {
     console.log("onRefresh");
-    // setRefreshing(true);
-    // filterMultipleNews();
-  }, []);
+    setRefreshing(true);
+    filterMultipleNews();
+    setRefreshing(false);
+  }, [refreshing]);
 
   useEffect(() => {
+    // console.log("useEffect");
     setEverythingNews(data);
   });
 
   return (
-    <View>
-      <ScrollView
-        // scrollEnabled={false}
-        refreshControl={
-          <RefreshControl
-            enabled={enablePTR}
-            refreshing={refreshing}
-            onRefresh={onRefresh}
-          />
-        }
-        style={styles.container}
-      >
-        {newsEverything.map((item) => (
-          <FlatCard
-            onPress={() => {
-              navigation.push(MORE_DETAILS_NEWS_NAME, { item });
-            }}
-            item={item}
-            key={item.id}
-          />
-        ))}
-      </ScrollView>
-    </View>
+    <ScrollView
+      refreshControl={
+        <RefreshControl
+          tintColor="#000000"
+          titleColor="#000000"
+          colors={["red", "green", "blue"]}
+          refreshing={refreshing}
+          onRefresh={onRefresh}
+        />
+      }
+      style={styles.container}
+    >
+      {newsEverything.map((item) => (
+        <FlatCard
+          onPress={() => {
+            navigation.push(MORE_DETAILS_NEWS_NAME, { item });
+          }}
+          item={item}
+          key={item.id}
+        />
+      ))}
+    </ScrollView>
   );
 }
 
