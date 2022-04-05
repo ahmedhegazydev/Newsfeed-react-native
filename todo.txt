@@ -6,5 +6,6 @@
 
 - Fixing rfersh control - done
 - Running on android 
+- Runnning Deep linking nav detail/settings on android
 - Fixing deep linking for details screen 
 - passing id to link  

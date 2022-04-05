@@ -23,11 +23,15 @@ export default function SearchBar({ setSearchFocused }) {
   const [notFound, setNotFound] = useState("");
 
   const handleChange = ({ nativeEvent }) => {
-    console.log(nativeEvent);
     const { text } = nativeEvent;
     setQuery(text);
     setVisible(true);
     debounceSearch(query);
+    // console.log(nativeEvent);
+    console.log(text);
+    if (text == "") {
+      setVisible(false);
+    }
   };
 
   const handleSearch = async (value) => {
