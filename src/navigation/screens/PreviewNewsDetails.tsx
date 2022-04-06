@@ -20,7 +20,7 @@ const PreviewNewsDetailsScreen = ({ route }) => {
     url,
     title,
     description,
-  } = route.params.item;
+  } = route.params.item || {};
 
   return (
     <ScrollView style={styles.container}>
