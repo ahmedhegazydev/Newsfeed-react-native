@@ -16,7 +16,7 @@ const debounce = (func: any, delay: any) => {
   };
 };
 
-export default function SearchBar({ setSearchFocused }) {
+export default function SearchBar({}) {
   const [query, setQuery] = useState<string>("");
   const [data, setData] = useState<New[] | null>([]);
   const [visible, setVisible] = useState<boolean>(false);
