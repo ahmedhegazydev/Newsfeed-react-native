@@ -37,13 +37,24 @@ export default function HomeScreen({ navigation }) {
   return (
     <Stack.Navigator
       screenOptions={{
+        // headerTitleStyle: {
+        //   paddingLeft: "20%",
+        //   paddingRight: "20%",
+        // },
+        headerStyle: {
+          // paddingRight: 40,
+          paddingLeft: 40,
+        },
         headerRight: () => (
-          <Button
-            title={translate("toggle_theme")}
-            onPress={() => {
-              toggleTheme();
-            }}
-          />
+          <View style={{ marginRight: 11 }}>
+            <Button
+              color="orange"
+              title={translate("toggle_theme")}
+              onPress={() => {
+                toggleTheme();
+              }}
+            />
+          </View>
         ),
       }}
     >
@@ -54,10 +65,15 @@ export default function HomeScreen({ navigation }) {
       />
       <Stack.Screen
         options={({ route }) => ({ title: "More Details" })}
-        add
         name={MORE_DETAILS_NEWS_NAME}
         component={PreviewNewsDetailsScreen}
       />
     </Stack.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  btn_toggle_theme: {
+    padding: 30,
+  },
+});
