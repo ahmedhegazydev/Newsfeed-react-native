@@ -5915,6 +5915,11 @@
     "setimmediate" "^1.0.5"
     "string-hash-64" "^1.0.3"
 
+"react-native-refresh-control-enrichment@^0.2.0":
+  "integrity" "sha512-RlxaSHjMukgtfyXbVi6QWYAaSyu2wQfYtUBgNdclpMyPkwcg4b9wXW/5xmfIwZiuLgAyAqa3imGydZuYj+Hkhg=="
+  "resolved" "https://registry.npmjs.org/react-native-refresh-control-enrichment/-/react-native-refresh-control-enrichment-0.2.0.tgz"
+  "version" "0.2.0"
+
 "react-native-safe-area-context@^3.1.9", "react-native-safe-area-context@^4.2.4", "react-native-safe-area-context@>= 3.0.0":
   "integrity" "sha512-OOX+W2G4YYufvryonn6Kw6YnyT8ZThkxPHZBD04NLHaZmicUaaDVII/PZ3M5fD1o5N62+T+8K4bCS5Un2ggvkA=="
   "resolved" "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-4.2.4.tgz"
@@ -5955,6 +5960,11 @@
   dependencies:
     "prop-types" "^15.7.2"
     "yargs" "^16.1.1"
+
+"react-native-web-refresh-control@^1.1.1":
+  "integrity" "sha512-vHCB4SEVJMrZgVo43dR+h8sg71AaybaPaIqyfzgmY9ejjRdrhbGHncPs2yAhjEzXC+OUt1cSmIpjsltLBYj9KA=="
+  "resolved" "https://registry.npmjs.org/react-native-web-refresh-control/-/react-native-web-refresh-control-1.1.1.tgz"
+  "version" "1.1.1"
 
 "react-native@*", "react-native@^0.0.0-0 || 0.60 - 0.68 || 1000.0.0", "react-native@>=0.46", "react-native@>=0.50.0", "react-native@>=0.57", "react-native@>=0.60.0", "react-native@0.68.0":
   "integrity" "sha512-Qi8KpG9rqiU0hVp05GKkuRe8iAVhblYMwpnwG3wkBi99Z/X8iZ0jD1b1UW0/y6oesmCyGQAxpsB36imU8zg1AQ=="

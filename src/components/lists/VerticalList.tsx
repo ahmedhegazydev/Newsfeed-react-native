@@ -1,10 +1,22 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { View, Text, StyleSheet, RefreshControl } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  // RefreshControl,
+  FlatList,
+  ActivityIndicator,
+  Platform,
+} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import FlatCard from "../cards/FlatCard";
 import { useNavigation } from "@react-navigation/native";
 import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";
 import newsApi from "../../api/NewApi";
+// import ZHRefreshControl, {
+// ZHScrollView,
+// } from "react-native-refresh-control-enrichment";
+import { RefreshControl } from "react-native-web-refresh-control";
 
 export default function VerticalList({ title, data }) {
   const navigation = useNavigation<StackNavigationProp<any>>();
@@ -30,8 +42,46 @@ export default function VerticalList({ title, data }) {
     setEverythingNews(data);
   });
 
+  // return (
+  //   <ScrollView
+  //     refreshControl={
+  //       <RefreshControl
+  //         tintColor="#000000"
+  //         titleColor="#000000"
+  //         colors={["red", "green", "blue"]}
+  //         refreshing={refreshing}
+  //         onRefresh={onRefresh}
+  //       />
+  //     }
+  //     style={styles.container}
+  //   >
+  //     {newsEverything.map((item) => (
+  //       <FlatCard
+  //         onPress={() => {
+  //           navigation.push(MORE_DETAILS_NEWS_NAME, { item });
+  //         }}
+  //         item={item}
+  //         key={item.id}
+  //       />
+  //     ))}
+  //   </ScrollView>
+  // );
+
+  const ItemDivider = () => {
+    return (
+      <View
+        style={{
+          height: 1,
+          width: "100%",
+          backgroundColor: "#607D8B",
+          marginBottom: 7,
+        }}
+      />
+    );
+  };
+
   return (
-    <ScrollView
+    <FlatList
       refreshControl={
         <RefreshControl
           tintColor="#000000"
@@ -41,9 +91,10 @@ export default function VerticalList({ title, data }) {
           onRefresh={onRefresh}
         />
       }
+      ItemSeparatorComponent={ItemDivider}
       style={styles.container}
-    >
-      {newsEverything.map((item) => (
+      data={newsEverything}
+      renderItem={({ item, index, separators }) => (
         <FlatCard
           onPress={() => {
             navigation.push(MORE_DETAILS_NEWS_NAME, { item });
@@ -51,8 +102,9 @@ export default function VerticalList({ title, data }) {
           item={item}
           key={item.id}
         />
-      ))}
-    </ScrollView>
+      )}
+      keyExtractor={(item) => item.id}
+    />
   );
 }
 
