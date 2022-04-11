@@ -80,7 +80,7 @@ export default function App() {
     setLocale(languageTag);
   };
 
-  const [theme, setTheme] = useState(Appearance.getColorScheme());
+  // const [theme, setTheme] = useState(Appearance.getColorScheme());
 
   return (
     <ThemeProvider>

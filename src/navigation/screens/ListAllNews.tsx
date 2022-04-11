@@ -16,7 +16,7 @@ import ActivityIndicator from "../../components/common/ActivityIndicator";
 import { useNavigation } from "@react-navigation/native";
 import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";
 
-export default function ListAllNewsScreen({ route }) {
+export default function ListAllNewsScreen({ route }: { route: {} }) {
   const [allNewsEverything, loading] = useNews();
   const navigation = useNavigation();
 

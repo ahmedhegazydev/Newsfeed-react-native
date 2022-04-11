@@ -24,7 +24,7 @@ import {
 } from "../../constants/constants";
 const Stack = createStackNavigator();
 
-export default function HomeScreen({ navigation }) {
+export default function HomeScreen() {
   const { toggleTheme } = React.useContext(ThemeContext);
 
   const Url_Settings = "myapp://settings";
