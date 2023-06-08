@@ -17,8 +17,8 @@ import { KEY_STORE_LANGUAGE } from "./src/constants/constants.tsx";
 
 i18n.fallbacks = true;
 i18n.translations = {
-  en: require("../Newsfeed/src/translations/en.json"),
-  ar: require("../Newsfeed/src/translations/ar.json"),
+  en: require("./src/translations/en.json"),
+  ar: require("./src/translations/ar.json"),
 };
 
 export default function App() {
