@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/ahmedhegazydev/Newsfeed-react-native/compare/v0.0.8...v0.0.9) (2023-06-09)
+
+
+### Features
+
+* formate publishedAt using moment ([364693b](https://github.com/ahmedhegazydev/Newsfeed-react-native/commit/364693bddde3c0355e8e9d67aaaecfff5684c074))
+
 ### [0.0.8](https://github.com/ahmedhegazydev/Newsfeed-react-native/compare/v0.0.7...v0.0.8) (2023-06-09)
 
 ### [0.0.7](https://github.com/ahmedhegazydev/Newsfeed-react-native/compare/v0.0.6...v0.0.7) (2023-06-09)
