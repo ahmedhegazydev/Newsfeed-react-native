@@ -66,8 +66,7 @@ function MainContainer() {
             title: translate("home"),
             tabBarIcon: ({ focused, color, size }) => (
               <Icon
-                name="home-variant"
-                type="material-community"
+                name="home"
                 color={focused ? Colors.primary : Colors.lightgrey}
                 size={24}
               />
@@ -83,7 +82,6 @@ function MainContainer() {
             tabBarIcon: ({ focused, color, size }) => (
               <Icon
                 name="settings"
-                type="material"
                 color={focused ? Colors.primary : Colors.lightgrey}
                 size={24}
               />

@@ -29,7 +29,7 @@ export default function FlatCard({ item, onPress }) {
           <Title numberOfLines={2} size={18}>
             {title}
           </Title>
-          <SubTitle numberOfLines={2} size={15}>
+          <SubTitle numberOfLines={4} size={15}>
             {description}
           </SubTitle>
         </View>
@@ -40,17 +40,16 @@ export default function FlatCard({ item, onPress }) {
 
 const styles = StyleSheet.create({
   containerlight: {
-    // width: "100%",
-    height: 80,
+    height: 130,
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "white",
     borderRadius: 8,
     overflow: "hidden",
-    marginBottom: 10,
+    marginBottom: 15,
+    elevation: 3,
   },
   containerdark: {
-    // width: "100%",
     height: 80,
     flexDirection: "row",
     alignItems: "center",
@@ -65,6 +64,6 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     flex: 0.65,
-    paddingHorizontal: 5,
+    paddingHorizontal: 8,
   },
 });

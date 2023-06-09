@@ -28,7 +28,6 @@ export default function ListAllNewsScreen({ route }: { route: {} }) {
     if (typeof route != "undefined" && route.params && route.params.id) {
       const id = route.params.id;
       console.log(id);
-
       navigation.push(MORE_DETAILS_NEWS_NAME, {
         item: {
           id: 2,
@@ -63,6 +62,6 @@ export default function ListAllNewsScreen({ route }: { route: {} }) {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10,
+    padding: 15,
   },
 });

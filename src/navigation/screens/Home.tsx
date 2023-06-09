@@ -53,7 +53,7 @@ export default function HomeScreen() {
       }}
     >
       <Stack.Screen
-        options={({ route }) => ({ title: "Wall Street" })}
+        options={({ route }) => ({ title: "News Feed" })}
         name={LIST_ALL_NEWS_NAME}
         component={ListAllNewsScreen}
       />

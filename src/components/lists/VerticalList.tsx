@@ -62,7 +62,7 @@ export default function VerticalList({ title, data }) {
           onRefresh={onRefresh}
         />
       }
-      ItemSeparatorComponent={ItemDivider}
+      // ItemSeparatorComponent={ItemDivider}
       style={styles.container}
       data={newsEverything}
       renderItem={({ item, index, separators }) => (
