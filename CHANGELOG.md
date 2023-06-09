@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/ahmedhegazydev/Newsfeed-react-native/compare/v0.0.5...v0.0.6) (2023-06-09)
+
+
+### Bug Fixes
+
+* Icon component showing just X ([4e5d6a8](https://github.com/ahmedhegazydev/Newsfeed-react-native/commit/4e5d6a84ae8dc7f030de0720fff91ac88a6b3bd5))
+
 ### [0.0.5](https://github.com/ahmedhegazydev/Newsfeed-react-native/compare/v0.0.4...v0.0.5) (2023-06-09)
 
 
