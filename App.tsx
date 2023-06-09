@@ -26,7 +26,7 @@ export default function App() {
   const { languageTag } =
     RNLocalize.findBestAvailableLanguage(["ar", "en"]) || fallback;
 
-  const [locale, setLocale] = useState < string > languageTag;
+  const [locale, setLocale] = useState<string>(languageTag);
   const localizationContext = useMemo(
     () => ({
       translate: (scope: string, options?: any) =>

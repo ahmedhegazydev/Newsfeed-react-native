@@ -22,6 +22,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+//npx uri-scheme open "myapp://app/allNews" --android
+// npx uri-scheme open "myapp://app/allNews/3"
 interface LinkingOptions {
   prefixes: string[];
   config: {
