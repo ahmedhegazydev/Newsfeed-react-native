@@ -9,7 +9,11 @@ import {
 } from "react-native";
 import * as Progress from "react-native-progress";
 
-const ActivityIndicator = ({ visible }) => {
+interface Props {
+  visible: boolean;
+}
+
+const ActivityIndicator = ({ visible }: Props) => {
   if (!visible) return null;
   const progress = useRef(new Animated.Value(0)).current;
   const handleLikeAnimation = () => {

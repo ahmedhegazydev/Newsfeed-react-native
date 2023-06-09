@@ -1,15 +1,30 @@
-import React, { useState, useContext, createContext } from "react";
+import React, { useState, useContext, createContext, ReactNode } from "react";
 
-export const useThemeContext = () => useContext(ThemeContext);
+interface ThemeContextProps {
+  theme: string;
+  toggleTheme: () => void;
+}
 
-const defaultValues = { theme: "light" };
-export const ThemeContext = createContext(defaultValues);
+export const useThemeContext = (): ThemeContextProps =>
+  useContext<ThemeContextProps>(ThemeContext);
 
-export const ThemeProvider = ({ children }) => {
+const defaultValues: ThemeContextProps = {
+  theme: "light",
+  toggleTheme: () => {},
+};
+export const ThemeContext = createContext<ThemeContextProps>(defaultValues);
+
+interface ThemeProviderProps {
+  children: ReactNode;
+}
+
+export const ThemeProvider = ({
+  children,
+}: ThemeProviderProps): JSX.Element => {
   const [theme, setTheme] = useState<string>("light");
 
   const toggleTheme = () => {
-    if (theme == "light") {
+    if (theme === "light") {
       setTheme("dark");
       console.log("dark");
     } else {

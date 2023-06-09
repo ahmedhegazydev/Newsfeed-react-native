@@ -17,16 +17,16 @@ export default function SettingsScreen({ navigation }) {
 
   const _storeData = async () => {
     try {
-      currrentLang = "";
+      let currentLang = "";
       if (storedLang == "Arabic") {
-        currrentLang = "English";
+        currentLang = "English";
         changeLanguage("ar");
       } else {
-        currrentLang = "Arabic";
+        currentLang = "Arabic";
         changeLanguage("en");
       }
-      setLanguage(currrentLang);
-      await AsyncStorage.setItem(KEY_STORE_LANGUAGE, currrentLang);
+      setLanguage(currentLang);
+      await AsyncStorage.setItem(KEY_STORE_LANGUAGE, currentLang);
     } catch (error) {
       console.log("error _storeData" + error);
     }
@@ -39,7 +39,7 @@ export default function SettingsScreen({ navigation }) {
 
   useEffect(() => {
     _retrieveData();
-  });
+  }, []);
 
   const _retrieveData = async () => {
     try {

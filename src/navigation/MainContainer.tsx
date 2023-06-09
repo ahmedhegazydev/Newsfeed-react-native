@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { HOME_NAME, SETTINGS_NAME } from "../constants/constants";
@@ -22,6 +22,15 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+interface LinkingOptions {
+  prefixes: string[];
+  config: {
+    screens: {
+      [key: string]: string | { path: string };
+    };
+  };
+}
+
 function MainContainer() {
   const config = {
     screens: {
@@ -39,7 +48,7 @@ function MainContainer() {
     },
   };
 
-  const linking = {
+  const linking: LinkingOptions = {
     prefixes: ["myapp://app"],
     config,
   };
@@ -48,7 +57,7 @@ function MainContainer() {
   const { translate } = useContext(LocalizationContext);
 
   return (
-    <NavigationContainer linking={linking}>
+    <NavigationContainer linking={linking} theme={DefaultTheme}>
       <Tab.Navigator
         initialRouteName={HOME_NAME}
         screenOptions={({ route }) => ({

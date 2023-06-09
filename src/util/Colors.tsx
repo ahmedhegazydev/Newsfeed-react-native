@@ -1,4 +1,4 @@
-export default Colors = {
+const Colors = {
   primary: "#4062BB",
   accent: "#59C3C3",
   purple: "#52489C",
@@ -10,3 +10,5 @@ export default Colors = {
   green: "#33BC6D",
   red: "#F53A3A",
 };
+
+export default Colors;

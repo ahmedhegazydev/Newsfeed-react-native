@@ -1,5 +1,8 @@
 {
   "home": "Home",
   "setting": "Settings",
-  "toggle_theme": "Toggle Theme"
+  "toggle_theme": "Toggle Theme",
+  "news_feed": "News Feed",
+  "more_details": "More Details",
+  "search_here": "Search here..."
 }

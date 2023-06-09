@@ -1,10 +1,16 @@
 import apiClient from "./client";
+import { AxiosResponse } from "axios";
 
-const getAllNewsEverything = async () => {
+interface NewsResponse {
+  data: any[];
+  error: string | Error;
+}
+
+const getAllNewsEverything = async (): Promise<NewsResponse> => {
   try {
     const endpoint =
       "/everything?domains=wsj.com&apiKey=3b677719d8794bdb91440e41130d9449";
-    const response = await apiClient.get(endpoint);
+    const response: AxiosResponse = await apiClient.get(endpoint);
     return { data: response.data.articles, error: "" };
   } catch (error) {
     if (error.response) {
@@ -12,17 +18,17 @@ const getAllNewsEverything = async () => {
       console.log(error.response.status);
       console.log(error.response.headers);
     } else {
-      console.log("Errror while getting all everything news ", error.message);
+      console.log("Error while getting all everything news ", error.message);
     }
     return { data: [], error: error };
   }
 };
 
-const searchNews = async (query) => {
-  if (!query) return {};
+const searchNews = async (query: string): Promise<any[]> => {
+  if (!query) return [];
   try {
     const endpoint = `/everything?q=${query}&from=2022-03-31&to=2022-03-31&sortBy=popularity&apiKey=3b677719d8794bdb91440e41130d9449`;
-    const response = await apiClient.get(endpoint);
+    const response: AxiosResponse = await apiClient.get(endpoint);
     return response.data.articles;
   } catch (error) {
     if (error.response) {
@@ -30,7 +36,7 @@ const searchNews = async (query) => {
       console.log(error.response.status);
       console.log(error.response.headers);
     } else {
-      console.log("Errror while  searchNews  ", error.message);
+      console.log("Error while searching news ", error.message);
     }
     return [];
   }

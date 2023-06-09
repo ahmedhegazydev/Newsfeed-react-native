@@ -6,9 +6,19 @@ import React, {
   useRef,
 } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import { ThemeProvider, ThemeContext } from "../../util/ThemeManager";
+import { ThemeContext } from "../../util/ThemeManager";
 
-export default function SubTitle({ children, numberOfLines = 2, size = 15 }) {
+interface Props {
+  children: any;
+  numberOfLines?: number;
+  size?: number;
+}
+
+export default function SubTitle({
+  children,
+  numberOfLines = 2,
+  size = 15,
+}: Props) {
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -22,6 +32,7 @@ export default function SubTitle({ children, numberOfLines = 2, size = 15 }) {
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   titlelight: {
     color: "black",

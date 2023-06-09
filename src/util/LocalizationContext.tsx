@@ -1,3 +1,3 @@
-import React from "react";
+import React, { createContext } from "react";
 
-export const LocalizationContext = React.createContext(null);
+export const LocalizationContext = createContext<any>(null);

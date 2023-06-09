@@ -1,13 +1,21 @@
-import React, { useState, useEffect, createRef } from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import { TextInput } from "react-native-gesture-handler";
+import React, { useState, useEffect, createRef, useContext } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  TextInput,
+} from "react-native";
+import { TextInput as GestureTextInput } from "react-native-gesture-handler";
 import newsApi from "../api/NewApi";
 import { New } from "../data/New";
 import SearchModal from "./common/SearchModal";
+import { LocalizationContext } from "../util/LocalizationContext";
+import { ThemeContext } from "react-native-elements";
 
-let timeoutId: any;
+let timeoutId: NodeJS.Timeout;
 
-const debounce = (func: any, delay: any) => {
+const debounce = (func: Function, delay: number) => {
   return (...args: any[]) => {
     if (timeoutId) clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
@@ -16,20 +24,21 @@ const debounce = (func: any, delay: any) => {
   };
 };
 
-export default function SearchBar({}) {
+export default function SearchBar() {
   const [query, setQuery] = useState<string>("");
   const [data, setData] = useState<New[] | null>([]);
   const [visible, setVisible] = useState<boolean>(false);
-
   const [notFound, setNotFound] = useState<string>("");
+  const { translate } = useContext(LocalizationContext);
+  const { theme } = useContext(ThemeContext);
 
-  const handleChange = ({ nativeEvent }) => {
+  const handleChange = ({ nativeEvent }: { nativeEvent: any }) => {
     const { text } = nativeEvent;
     setQuery(text);
     setVisible(true);
     debounceSearch(query);
     console.log(text);
-    if (text == "") {
+    if (text === "") {
       setVisible(false);
     }
   };
@@ -41,7 +50,7 @@ export default function SearchBar({}) {
       setData(articles);
       setNotFound("");
     } else {
-      setNotFound("No articales matches ");
+      setNotFound("No articles match");
     }
   };
 
@@ -49,12 +58,12 @@ export default function SearchBar({}) {
 
   return (
     <>
-      <View style={styles.container}>
+      <View style={[styles.containerlight, styles[`container${theme}`]]}>
         <TextInput
           value={query}
           placeholderTextColor="#000"
           style={styles.searchInput}
-          placeholder="Search here..."
+          placeholder={translate("search_here")}
           onChange={handleChange}
           onFocus={() => {}}
           onBlur={() => {
@@ -71,17 +80,26 @@ export default function SearchBar({}) {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  containerlight: {
     width: "100%",
     height: 50,
     backgroundColor: "white",
     borderRadius: 8,
-    justifyConent: "center",
+    justifyContent: "center",
+    elevation: 3,
+  },
+  containerdark: {
+    width: "100%",
+    height: 50,
+    borderRadius: 8,
+    justifyContent: "center",
+    elevation: 3,
+    backgroundColor: "#282828",
   },
   searchInput: {
     width: "100%",
     height: "100%",
-    paddingLeft: 8,
+    padding: 10,
     fontSize: 16,
   },
 });

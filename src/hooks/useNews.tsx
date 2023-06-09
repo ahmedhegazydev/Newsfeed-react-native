@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import {
   StatusBar,
   StyleSheet,
@@ -10,7 +9,7 @@ import {
 import newsApi from "../api/NewApi";
 import { New } from "../data/New";
 
-export default useNews = () => {
+const useNews = () => {
   const [newsEverything, setEverythingNews] = useState<New[] | null>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -25,7 +24,7 @@ export default useNews = () => {
       setLoading(false);
     }
 
-    for (var i = 0; i < allNewsEverything.size; i++) {
+    for (let i = 0; i < allNewsEverything.length; i++) {
       allNewsEverything[i].id = i;
     }
   };
@@ -34,5 +33,7 @@ export default useNews = () => {
     filterMultipleNews();
   }, []);
 
-  return [newsEverything, loading];
+  return [newsEverything, loading] as const;
 };
+
+export default useNews;

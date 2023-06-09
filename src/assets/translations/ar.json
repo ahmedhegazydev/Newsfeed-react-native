@@ -1,5 +1,8 @@
 {
   "home": "الرئيسيه",
   "setting": "الاعدادات",
-  "toggle_theme": "غير اللون"
+  "toggle_theme": "غير اللون",
+  "news_feed": "اخر الاخبار",
+  "more_details": "تفاصيل اكثر",
+  "search_here": "ابحث هنا..."
 }

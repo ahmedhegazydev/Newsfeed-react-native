@@ -8,12 +8,18 @@ import {
 } from "react-native";
 import { ScrollView, TextInput } from "react-native-gesture-handler";
 import FlatCard from "../cards/FlatCard";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, StackNavigationProp } from "@react-navigation/native";
 import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";
 
 const { height } = Dimensions.get("window");
 
-const SearchModal = ({ visible, data, notFound }) => {
+interface Props {
+  visible: boolean;
+  data: any[];
+  notFound: string;
+}
+
+const SearchModal = ({ visible, data, notFound }: Props) => {
   const navigation = useNavigation<StackNavigationProp<any>>();
 
   if (!visible) return null;
@@ -23,7 +29,7 @@ const SearchModal = ({ visible, data, notFound }) => {
       <View
         style={[
           styles.container,
-          { justifyCenter: "center", alignItems: "center" },
+          { justifyContent: "center", alignItems: "center" },
         ]}
       >
         <Text style={{ color: "white", fontSize: 20, fontWeight: "bold" }}>
@@ -51,6 +57,7 @@ const SearchModal = ({ visible, data, notFound }) => {
     </View>
   );
 };
+
 export default SearchModal;
 
 const styles = StyleSheet.create({

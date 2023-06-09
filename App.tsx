@@ -7,13 +7,13 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { Appearance } from "react-native";
-import MainContainer from "./src/navigation/MainContainer.tsx";
-import { ThemeProvider, ThemeContext } from "./src/util/ThemeManager.tsx";
+import MainContainer from "./src/navigation/MainContainer";
+import { ThemeProvider, ThemeContext } from "./src/util/ThemeManager";
 import * as RNLocalize from "react-native-localize";
 import i18n from "i18n-js";
-import { LocalizationContext } from "./src/util/LocalizationContext.tsx";
+import { LocalizationContext } from "./src/util/LocalizationContext";
 import { AsyncStorage } from "react-native";
-import { KEY_STORE_LANGUAGE } from "./src/constants/constants.tsx";
+import { KEY_STORE_LANGUAGE } from "./src/constants/constants";
 
 i18n.fallbacks = true;
 i18n.translations = {
@@ -24,16 +24,13 @@ i18n.translations = {
 export default function App() {
   const fallback = { languageTag: "ar" };
   const { languageTag } =
-    RNLocalize.findBestAvailableLanguage([
-      "ar",
-      "en",
-      // "ms",
-    ]) || fallback;
+    RNLocalize.findBestAvailableLanguage(["ar", "en"]) || fallback;
 
-  const [locale, setLocale] = useState(languageTag);
+  const [locale, setLocale] = useState < string > languageTag;
   const localizationContext = useMemo(
     () => ({
-      translate: (scope, options) => i18n.t(scope, { locale, ...options }),
+      translate: (scope: string, options?: any) =>
+        i18n.t(scope, { locale, ...options }),
       locale,
       setLocale,
     }),
@@ -50,7 +47,7 @@ export default function App() {
 
   useEffect(() => {
     _retrieveData();
-  });
+  }, []);
 
   const _retrieveData = async () => {
     try {
@@ -71,16 +68,10 @@ export default function App() {
     console.log("handleLocalizationChange");
 
     const { languageTag } =
-      RNLocalize.findBestAvailableLanguage([
-        "ar",
-        "en",
-        // "ms",
-      ]) || fallback;
+      RNLocalize.findBestAvailableLanguage(["ar", "en"]) || fallback;
     console.log(languageTag);
     setLocale(languageTag);
   };
-
-  // const [theme, setTheme] = useState(Appearance.getColorScheme());
 
   return (
     <ThemeProvider>

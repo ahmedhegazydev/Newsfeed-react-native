@@ -13,13 +13,31 @@ import Hyperlink from "react-native-hyperlink";
 
 const { width, height } = Dimensions.get("window");
 
-const PreviewNewsDetailsScreen = ({ route }) => {
+interface NewsDetailsParams {
+  urlToImage: string;
+  content: string;
+  url: string;
+  title: string;
+  description: string;
+  publishedAt: string;
+  author: string;
+  source: {
+    name: string;
+  };
+}
+
+const PreviewNewsDetailsScreen: React.FC<{
+  route: { params: { item: NewsDetailsParams } };
+}> = ({ route }) => {
   const {
     urlToImage: image,
     content,
     url,
     title,
     description,
+    publishedAt,
+    author,
+    source,
   } = route.params.item || {};
 
   return (
@@ -31,14 +49,29 @@ const PreviewNewsDetailsScreen = ({ route }) => {
           <Text style={{ fontSize: 15, marginBottom: 6 }}>{url}</Text>
         </Hyperlink>
         <Text style={{ fontSize: 15, fontWeight: "bold", marginTop: 10 }}>
-          Description
+          Description:
         </Text>
         <Text style={styles.content}>{description}</Text>
 
         <Text style={{ fontSize: 15, fontWeight: "bold", marginTop: 10 }}>
-          Content
+          Content:
         </Text>
         <Text style={styles.content}>{content}</Text>
+
+        <Text style={{ fontSize: 15, fontWeight: "bold", marginTop: 10 }}>
+          Published At:
+        </Text>
+        <Text style={styles.content}>{publishedAt}</Text>
+
+        <Text style={{ fontSize: 15, fontWeight: "bold", marginTop: 10 }}>
+          Author:
+        </Text>
+        <Text style={styles.content}>{author}</Text>
+
+        <Text style={{ fontSize: 15, fontWeight: "bold", marginTop: 10 }}>
+          Source Name:
+        </Text>
+        <Text style={styles.content}>{source.name}</Text>
       </View>
     </ScrollView>
   );

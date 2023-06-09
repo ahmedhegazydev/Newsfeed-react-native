@@ -6,21 +6,19 @@ import React, {
   useRef,
 } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import {
-  ThemeProvider,
-  ThemeContext,
-  useThemeContext,
-} from "../../util/ThemeManager";
+import { ThemeContext, useThemeContext } from "../../util/ThemeManager";
+
+interface Props {
+  children: any;
+  numberOfLines?: number;
+  size?: number;
+}
 
 export default function Title({
   children,
   numberOfLines = 2,
   size = 18,
-}: {
-  children: {};
-  numberOfLines: any;
-  size: any;
-}) {
+}: Props) {
   const { theme } = useThemeContext(ThemeContext);
 
   return (
@@ -34,6 +32,7 @@ export default function Title({
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   titlelight: {
     fontWeight: "bold",

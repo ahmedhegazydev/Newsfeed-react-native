@@ -8,16 +8,23 @@ import {
   Platform,
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import FlatCard from "../cards/FlatCard";
+import { StackNavigationProp } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
+import { RefreshControl } from "react-native-web-refresh-control";
+import FlatCard from "../cards/FlatCard";
 import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";
 import newsApi from "../../api/NewApi";
-import { RefreshControl } from "react-native-web-refresh-control";
+import { New } from "../../data/New";
 
-export default function VerticalList({ title, data }) {
+interface Props {
+  title: string;
+  data: New[];
+}
+
+export default function VerticalList({ title, data }: Props) {
   const navigation = useNavigation<StackNavigationProp<any>>();
 
-  const [newsEverything, setEverythingNews] = useState([]);
+  const [newsEverything, setEverythingNews] = useState<New[]>([]);
   const [refreshing, setRefreshing] = useState<boolean>(false);
 
   const filterMultipleNews = async () => {
@@ -29,14 +36,15 @@ export default function VerticalList({ title, data }) {
       setRefreshing(false);
     }
   };
-  const onRefresh = React.useCallback(() => {
+
+  const onRefresh = useCallback(() => {
     console.log("onRefresh");
     filterMultipleNews();
   }, [refreshing]);
 
   useEffect(() => {
     setEverythingNews(data);
-  });
+  }, [data]);
 
   const ItemDivider = () => {
     return (

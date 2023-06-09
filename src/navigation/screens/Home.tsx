@@ -22,15 +22,22 @@ import {
   LIST_ALL_NEWS_NAME,
   MORE_DETAILS_NEWS_NAME,
 } from "../../constants/constants";
-const Stack = createStackNavigator();
+import { StackNavigationProp } from "@react-navigation/stack";
+
+type HomeScreenStackParamList = {
+  ListAllNews: undefined;
+  PreviewNewsDetails: { item: any };
+};
+
+type HomeScreenNavigationProp = StackNavigationProp<
+  HomeScreenStackParamList,
+  "ListAllNews"
+>;
+
+const Stack = createStackNavigator<HomeScreenStackParamList>();
 
 export default function HomeScreen() {
   const { toggleTheme } = React.useContext(ThemeContext);
-
-  const Url_Settings = "myapp://settings";
-  const Url_Details = "myapp://details";
-  const Url_All_News = "myapp://allNews";
-
   const { translate } = useContext(LocalizationContext);
 
   return (
@@ -53,12 +60,12 @@ export default function HomeScreen() {
       }}
     >
       <Stack.Screen
-        options={({ route }) => ({ title: "News Feed" })}
+        options={({ route }) => ({ title: translate("news_feed") })}
         name={LIST_ALL_NEWS_NAME}
         component={ListAllNewsScreen}
       />
       <Stack.Screen
-        options={({ route }) => ({ title: "More Details" })}
+        options={({ route }) => ({ title: translate("more_details") })}
         name={MORE_DETAILS_NEWS_NAME}
         component={PreviewNewsDetailsScreen}
       />

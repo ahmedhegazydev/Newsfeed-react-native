@@ -1,3 +1,8 @@
+interface Source {
+  id: string;
+  name: string;
+}
+
 interface New {
   source: Source;
   author: string;
@@ -9,9 +14,4 @@ interface New {
   content: string;
 }
 
-interface Source {
-  id: string;
-  name: string;
-}
-
-export { New };
+export { New, Source };

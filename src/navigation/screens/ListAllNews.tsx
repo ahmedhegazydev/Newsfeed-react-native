@@ -15,17 +15,31 @@ import useNews from "../../hooks/useNews";
 import ActivityIndicator from "../../components/common/ActivityIndicator";
 import { useNavigation } from "@react-navigation/native";
 import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";
+import { StackNavigationProp } from "@react-navigation/stack";
 
-export default function ListAllNewsScreen({ route }: { route: {} }) {
+interface RouteParams {
+  id: number;
+}
+
+type ListAllNewsScreenNavigationProp = StackNavigationProp<any, "ListAllNews">;
+
+type ListAllNewsScreenProps = {
+  route: { params?: RouteParams };
+  navigation: ListAllNewsScreenNavigationProp;
+};
+
+export default function ListAllNewsScreen({
+  route,
+  navigation,
+}: ListAllNewsScreenProps) {
   const [allNewsEverything, loading] = useNews();
-  const navigation = useNavigation();
 
   useEffect(() => {
     getPassedDeepLinkParams();
   }, []);
 
   const getPassedDeepLinkParams = () => {
-    if (typeof route != "undefined" && route.params && route.params.id) {
+    if (route.params && route.params.id) {
       const id = route.params.id;
       console.log(id);
       navigation.push(MORE_DETAILS_NEWS_NAME, {

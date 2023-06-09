@@ -1,5 +1,7 @@
-import axios from "axios";
+import axios, { AxiosInstance } from "axios";
 
-export default axios.create({
+const newsApi: AxiosInstance = axios.create({
   baseURL: "https://newsapi.org/v2",
 });
+
+export default newsApi;

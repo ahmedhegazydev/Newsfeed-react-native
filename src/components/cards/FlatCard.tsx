@@ -1,29 +1,31 @@
-import React, {
-  useState,
-  useContext,
-  useEffect,
-  createRef,
-  useRef,
-} from "react";
+import React, { useContext } from "react";
 import {
   StyleSheet,
   Text,
   View,
   Image,
   TouchableWithoutFeedback,
-  TouchableOpacity,
 } from "react-native";
 import Title from "../common/Title";
 import SubTitle from "../common/SubTitle";
-import { ThemeProvider, ThemeContext } from "../../util/ThemeManager";
+import { ThemeContext } from "../../util/ThemeManager";
 
-export default function FlatCard({ item, onPress }) {
+interface FlatCardProps {
+  item: {
+    urlToImage: string;
+    title: string;
+    description: string;
+  };
+  onPress: () => void;
+}
+
+export default function FlatCard({ item, onPress }: FlatCardProps) {
   const { urlToImage, title, description } = item;
   const { theme } = useContext(ThemeContext);
 
   return (
     <TouchableWithoutFeedback onPress={onPress}>
-      <View style={[styles.containerlight, styles[`container${theme}`]]}>
+      <View style={[styles.container, styles[`container${theme}`]]}>
         <Image source={{ uri: urlToImage }} style={styles.image} />
         <View style={styles.contentContainer}>
           <Title numberOfLines={2} size={18}>
@@ -39,24 +41,20 @@ export default function FlatCard({ item, onPress }) {
 }
 
 const styles = StyleSheet.create({
-  containerlight: {
+  container: {
     height: 130,
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "white",
     borderRadius: 8,
     overflow: "hidden",
     marginBottom: 15,
     elevation: 3,
   },
+  containerlight: {
+    backgroundColor: "white",
+  },
   containerdark: {
-    height: 80,
-    flexDirection: "row",
-    alignItems: "center",
     backgroundColor: "#282828",
-    borderRadius: 8,
-    overflow: "hidden",
-    marginBottom: 10,
   },
   image: {
     flex: 0.35,
@@ -64,6 +62,6 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     flex: 0.65,
-    paddingHorizontal: 8,
+    paddingHorizontal: 10,
   },
 });
