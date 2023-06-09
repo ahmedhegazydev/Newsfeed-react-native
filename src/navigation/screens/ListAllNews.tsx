@@ -21,22 +21,14 @@ export default function ListAllNewsScreen({ route }: { route: {} }) {
   const navigation = useNavigation();
 
   useEffect(() => {
-    // const timeout = setTimeout(() => {
     getPassedDeepLinkParams();
-    // }, 5000);
-    // return () => clearTimeout(timeout);
   }, []);
 
   const getPassedDeepLinkParams = () => {
     if (typeof route != "undefined" && route.params && route.params.id) {
       const id = route.params.id;
       console.log(id);
-      // const filteredNews = allNewsEverything.filter((item) => {
-      //   // item.id == route.params.id;
-      //   item.id === "1";
-      // });
-      // // console.log(filteredNews.id);
-      // console.log(filteredNews);
+
       navigation.push(MORE_DETAILS_NEWS_NAME, {
         item: {
           id: 2,

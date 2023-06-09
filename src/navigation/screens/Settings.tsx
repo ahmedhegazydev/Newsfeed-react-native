@@ -10,7 +10,7 @@ import {
 
 import { AsyncStorage } from "react-native";
 import { KEY_STORE_LANGUAGE } from "../../constants/constants";
-import { LocalizationContext } from "../../contexts/LocalizationContext";
+import { LocalizationContext } from "../../util/LocalizationContext";
 
 export default function SettingsScreen({ navigation }) {
   let storedLang = "Arabic";

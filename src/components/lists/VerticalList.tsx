@@ -3,7 +3,6 @@ import {
   View,
   Text,
   StyleSheet,
-  // RefreshControl,
   FlatList,
   ActivityIndicator,
   Platform,
@@ -13,9 +12,6 @@ import FlatCard from "../cards/FlatCard";
 import { useNavigation } from "@react-navigation/native";
 import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";
 import newsApi from "../../api/NewApi";
-// import ZHRefreshControl, {
-// ZHScrollView,
-// } from "react-native-refresh-control-enrichment";
 import { RefreshControl } from "react-native-web-refresh-control";
 
 export default function VerticalList({ title, data }) {
@@ -41,31 +37,6 @@ export default function VerticalList({ title, data }) {
   useEffect(() => {
     setEverythingNews(data);
   });
-
-  // return (
-  //   <ScrollView
-  //     refreshControl={
-  //       <RefreshControl
-  //         tintColor="#000000"
-  //         titleColor="#000000"
-  //         colors={["red", "green", "blue"]}
-  //         refreshing={refreshing}
-  //         onRefresh={onRefresh}
-  //       />
-  //     }
-  //     style={styles.container}
-  //   >
-  //     {newsEverything.map((item) => (
-  //       <FlatCard
-  //         onPress={() => {
-  //           navigation.push(MORE_DETAILS_NEWS_NAME, { item });
-  //         }}
-  //         item={item}
-  //         key={item.id}
-  //       />
-  //     ))}
-  //   </ScrollView>
-  // );
 
   const ItemDivider = () => {
     return (
@@ -100,10 +71,10 @@ export default function VerticalList({ title, data }) {
             navigation.push(MORE_DETAILS_NEWS_NAME, { item });
           }}
           item={item}
-          key={item.id}
+          key={item.id} // Use a unique key for each FlatCard
         />
       )}
-      keyExtractor={(item) => item.id}
+      keyExtractor={(item, index) => item.id + index.toString()} // Modify the keyExtractor
     />
   );
 }

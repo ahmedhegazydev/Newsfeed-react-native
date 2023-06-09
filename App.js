@@ -11,14 +11,14 @@ import MainContainer from "./src/navigation/MainContainer.tsx";
 import { ThemeProvider, ThemeContext } from "./src/util/ThemeManager.tsx";
 import * as RNLocalize from "react-native-localize";
 import i18n from "i18n-js";
-import { LocalizationContext } from "./src/contexts/LocalizationContext.tsx";
+import { LocalizationContext } from "./src/util/LocalizationContext.tsx";
 import { AsyncStorage } from "react-native";
 import { KEY_STORE_LANGUAGE } from "./src/constants/constants.tsx";
 
 i18n.fallbacks = true;
 i18n.translations = {
-  en: require("./src/translations/en.json"),
-  ar: require("./src/translations/ar.json"),
+  en: require("./src/assets/translations/en.json"),
+  ar: require("./src/assets/translations/ar.json"),
 };
 
 export default function App() {

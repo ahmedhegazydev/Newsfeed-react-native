@@ -55,10 +55,8 @@ export default SearchModal;
 
 const styles = StyleSheet.create({
   container: {
-    // position: "absolute",
     width: "100%",
     top: 15,
-    // backgroundColor: "rgba(0, 0, 0, 0.5)",
     backgroundColor: "white",
     maxHeight: height / 2,
     zIndex: 1,
@@ -66,8 +64,5 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "thistle",
     borderRadius: 10,
-    // margin: 20,
-    // borderBottomLeftRadius: 10,
-    // borderBottomRightRadius: 10,
   },
 });

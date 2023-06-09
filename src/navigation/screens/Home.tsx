@@ -17,7 +17,7 @@ import ListAllNewsScreen from "./ListAllNews";
 
 import PreviewNewsDetailsScreen from "./PreviewNewsDetails";
 import { ThemeContext } from "../../util/ThemeManager";
-import { LocalizationContext } from "../../contexts/LocalizationContext";
+import { LocalizationContext } from "../../util/LocalizationContext";
 import {
   LIST_ALL_NEWS_NAME,
   MORE_DETAILS_NEWS_NAME,
@@ -28,7 +28,6 @@ export default function HomeScreen() {
   const { toggleTheme } = React.useContext(ThemeContext);
 
   const Url_Settings = "myapp://settings";
-  // const Url_Details = `myapp://${MORE_DETAILS_NEWS_NAME}`;
   const Url_Details = "myapp://details";
   const Url_All_News = "myapp://allNews";
 
@@ -37,12 +36,7 @@ export default function HomeScreen() {
   return (
     <Stack.Navigator
       screenOptions={{
-        // headerTitleStyle: {
-        //   paddingLeft: "20%",
-        //   paddingRight: "20%",
-        // },
         headerStyle: {
-          // paddingRight: 40,
           paddingLeft: 40,
         },
         headerRight: () => (

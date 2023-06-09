@@ -5,7 +5,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import { HOME_NAME, SETTINGS_NAME } from "../constants/constants";
 import SettingsScreen from "./screens/Settings";
 import HomeScreen from "./screens/Home";
-import { LocalizationContext } from "../contexts/LocalizationContext";
+import { LocalizationContext } from "../util/LocalizationContext";
 import { Icon } from "react-native-elements";
 import Colors from "../util/Colors";
 import {
@@ -29,35 +29,13 @@ function MainContainer() {
       Home: {
         screens: {
           ListAllNews: {
-            //myapp://app/allNews
-            // path: "allNews",
             path: "allNews/:id",
-            // parse: {
-            //   id: (id) => `user-${id}`,
-            // },
-            // stringify: {
-            //   id: (id) => id.replace(/^user-/, ''),
-            // },
           },
           NewsDetails: {
-            ///myapp://app/details/33
             path: "details/:id",
-            // parse: {
-            //   id: (id) => `user-${id}`,
-            // },
-            // stringify: {
-            //   id: (id) => id.replace(/^user-/, ""),
-            // },
           },
         },
       },
-      // ScreenDetails: "home/allNews/details",
-      // WallStreetJournal: {
-      //   path: "home/allNews/:token",
-      //   params: {
-      //     token: null,
-      //   },
-      // },
     },
   };
 
@@ -65,21 +43,6 @@ function MainContainer() {
     prefixes: ["myapp://app"],
     config,
   };
-  // const useMount = (func) => useEffect(() => func(), []);
-  // useMount(() => {
-  //   const getUrlAsync = async () => {
-  //     // Get the deep link used to open the app
-  //     const initialUrl = await Linking.getInitialURL();
-  //     if (initialUrl !== null) {
-  //       return;
-  //     }
-  //     if (initialUrl.includes("Settings")) {
-  //       Alert.alert(initialUrl);
-  //     }
-  //   };
-
-  //   getUrlAsync();
-  // });
 
   const Tab = createBottomTabNavigator();
   const { translate } = useContext(LocalizationContext);
