@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/ahmedhegazydev/Newsfeed-react-native/compare/v0.0.4...v0.0.5) (2023-06-09)
+
+
+### Features
+
+* disable react native warning message at the bottom ([fb00e54](https://github.com/ahmedhegazydev/Newsfeed-react-native/commit/fb00e544580ed983e5c16f369f5365c3d4b0a911))
+
 ### [0.0.4](https://github.com/ahmedhegazydev/Newsfeed-react-native/compare/v0.0.3...v0.0.4) (2023-06-09)
 
 
