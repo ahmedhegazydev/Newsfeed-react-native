@@ -1,12 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import {
-  StyleSheet,
-  Text,
-  Switch,
-  Button,
-  View,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 import { AsyncStorage } from "react-native";
 import { KEY_STORE_LANGUAGE } from "../../constants/constants";

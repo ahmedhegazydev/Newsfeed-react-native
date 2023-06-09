@@ -1,16 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-  Button,
-  Linking,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, View, Button } from "react-native";
 
 import { createStackNavigator } from "@react-navigation/stack";
 import ListAllNewsScreen from "./ListAllNews";

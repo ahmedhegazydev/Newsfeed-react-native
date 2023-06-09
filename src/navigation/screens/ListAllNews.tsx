@@ -1,14 +1,6 @@
 import React, { useState, useEffect, createRef, useLayoutEffect } from "react";
 
-import {
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
-  Alert,
-  Linking,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, View } from "react-native";
 import SearchBar from "../../components/SearchBar";
 import EverythingNews from "../../components/NewsEverything";
 import useNews from "../../hooks/useNews";

@@ -1,11 +1,4 @@
-import React, { useState, useEffect, createRef } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  Dimensions,
-} from "react-native";
+import { StyleSheet, Text, View, Dimensions } from "react-native";
 import { ScrollView, TextInput } from "react-native-gesture-handler";
 import FlatCard from "../cards/FlatCard";
 import { useNavigation, StackNavigationProp } from "@react-navigation/native";

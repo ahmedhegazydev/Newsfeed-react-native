@@ -1,3 +1,4 @@
+import moment from "moment";
 import apiClient from "./client";
 import { AxiosResponse } from "axios";
 
@@ -11,7 +12,13 @@ const getAllNewsEverything = async (): Promise<NewsResponse> => {
     const endpoint =
       "/everything?domains=wsj.com&apiKey=3b677719d8794bdb91440e41130d9449";
     const response: AxiosResponse = await apiClient.get(endpoint);
-    return { data: response.data.articles, error: "" };
+
+    const formattedArticles = response.data.articles.map((article: any) => ({
+      ...article,
+      publishedAt: moment(article.publishedAt).format("YYYY-MM-DD HH:mm:ss"),
+    }));
+
+    return { data: formattedArticles, error: "" };
   } catch (error) {
     if (error.response) {
       console.log(error.response.data);
@@ -29,7 +36,13 @@ const searchNews = async (query: string): Promise<any[]> => {
   try {
     const endpoint = `/everything?q=${query}&from=2022-03-31&to=2022-03-31&sortBy=popularity&apiKey=3b677719d8794bdb91440e41130d9449`;
     const response: AxiosResponse = await apiClient.get(endpoint);
-    return response.data.articles;
+
+    const formattedArticles = response.data.articles.map((article: any) => ({
+      ...article,
+      publishedAt: moment(article.publishedAt).format("YYYY-MM-DD HH:mm:ss"),
+    }));
+
+    return formattedArticles;
   } catch (error) {
     if (error.response) {
       console.log(error.response.data);

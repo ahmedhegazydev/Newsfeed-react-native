@@ -1,11 +1,4 @@
 import React, { useState, useEffect } from "react";
-import {
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-} from "react-native";
 import newsApi from "../api/NewApi";
 import { New } from "../data/New";
 

@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useContext,
-  useEffect,
-  createRef,
-  useRef,
-} from "react";
+import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { ThemeContext, useThemeContext } from "../../util/ThemeManager";
 

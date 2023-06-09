@@ -7,7 +7,6 @@ import {
   ScrollView,
   Image,
   Dimensions,
-  TouchableOpacity,
 } from "react-native";
 import Hyperlink from "react-native-hyperlink";
 

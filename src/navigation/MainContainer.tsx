@@ -1,26 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import { HOME_NAME, SETTINGS_NAME } from "../constants/constants";
 import SettingsScreen from "./screens/Settings";
 import HomeScreen from "./screens/Home";
 import { LocalizationContext } from "../util/LocalizationContext";
 import { Icon } from "react-native-elements";
 import Colors from "../util/Colors";
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-  Button,
-  Linking,
-  Alert,
-  TouchableOpacity,
-} from "react-native";
 
 //npx uri-scheme open "myapp://app/allNews" --android
 // npx uri-scheme open "myapp://app/allNews/3"
