@@ -1,6 +1,7 @@
 import moment from "moment";
 import apiClient from "./client";
 import { AxiosResponse } from "axios";
+import { HEADLINES, SEARCH } from "../constants/constants";
 
 interface NewsResponse {
   data: any[];
@@ -9,8 +10,7 @@ interface NewsResponse {
 
 const getAllNewsEverything = async (): Promise<NewsResponse> => {
   try {
-    const endpoint =
-      "/everything?domains=wsj.com&apiKey=3b677719d8794bdb91440e41130d9449";
+    const endpoint = HEADLINES;
     const response: AxiosResponse = await apiClient.get(endpoint);
 
     const formattedArticles = response.data.articles.map((article: any) => ({
@@ -34,7 +34,7 @@ const getAllNewsEverything = async (): Promise<NewsResponse> => {
 const searchNews = async (query: string): Promise<any[]> => {
   if (!query) return [];
   try {
-    const endpoint = `/everything?q=${query}&from=2022-03-31&to=2022-03-31&sortBy=popularity&apiKey=3b677719d8794bdb91440e41130d9449`;
+    const endpoint = `${SEARCH}&q=${query.toLowerCase()}`;
     const response: AxiosResponse = await apiClient.get(endpoint);
 
     const formattedArticles = response.data.articles.map((article: any) => ({
