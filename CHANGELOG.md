@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/ahmedhegazydev/Newsfeed-react-native/compare/v0.0.9...v0.0.10) (2023-06-10)
+
+
+### Bug Fixes
+
+* cannot be used as a JSX component by adding types ([2688d53](https://github.com/ahmedhegazydev/Newsfeed-react-native/commit/2688d53339358706e17f9e069b451d0def133179))
+
 ### [0.0.9](https://github.com/ahmedhegazydev/Newsfeed-react-native/compare/v0.0.8...v0.0.9) (2023-06-09)
 
 
