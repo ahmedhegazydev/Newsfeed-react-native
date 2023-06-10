@@ -5,66 +5,68 @@ import { HEADLINES, SEARCH } from "../constants/constants";
 import getAllNewsDummy from "../../src/assets/ApiDummy/getAllNewsDummy.json";
 import searchNewsDummy from "../../src/assets/ApiDummy/searchNewsDummy.json";
 import { showErrorToast } from "../../src/util/Toasts";
+import { New } from "../data/New";
 
 interface NewsResponse {
   data: any[];
   error: string | Error;
 }
 
-const getAllNewsEverything = async (): Promise<NewsResponse> => {
-  try {
-    const endpoint = HEADLINES;
-    const response: AxiosResponse = await apiClient.get(endpoint);
-
-    const formattedArticles = response.data.articles.map((article: any) => ({
+class NewsRepository {
+  private formatArticle(article: any): New {
+    return {
       ...article,
       publishedAt: moment(article.publishedAt).format("YYYY-MM-DD HH:mm:ss"),
-    }));
+    };
+  }
 
-    return { data: formattedArticles, error: "" };
-  } catch (error) {
+  private handleErrorResponse(error: any): void {
     if (error.response) {
       console.log(error.response.data);
       console.log(error.response.status);
       console.log(error.response.headers);
     } else {
-      console.log("Error while getting all everything news ", error.message);
+      console.log("Error:", error.message);
       showErrorToast(error.message);
     }
-    const articles = getAllNewsDummy.articles;
-
-    return { data: articles, error: error };
   }
-};
 
-const searchNews = async (query: string): Promise<any[]> => {
-  if (!query) return [];
-  try {
-    const endpoint = `${SEARCH}&q=${query.toLowerCase()}`;
-    const response: AxiosResponse = await apiClient.get(endpoint);
+  async getAllNewsEverything(): Promise<NewsResponse> {
+    try {
+      const endpoint = HEADLINES;
+      const response: AxiosResponse = await apiClient.get(endpoint);
 
-    const formattedArticles = response.data.articles.map((article: any) => ({
-      ...article,
-      publishedAt: moment(article.publishedAt).format("YYYY-MM-DD HH:mm:ss"),
-    }));
+      const formattedArticles = response.data.articles.map((article: any) =>
+        this.formatArticle(article)
+      );
 
-    return formattedArticles;
-  } catch (error) {
-    if (error.response) {
-      console.log(error.response.data);
-      console.log(error.response.status);
-      console.log(error.response.headers);
-    } else {
-      console.log("Error while searching news ", error.message);
-      showErrorToast(error.message);
+      return { data: formattedArticles, error: "" };
+    } catch (error) {
+      this.handleErrorResponse(error);
+      const articles = getAllNewsDummy.articles;
+
+      return { data: articles, error: error };
     }
-    const articles = searchNewsDummy.articles;
-
-    return articles;
   }
-};
 
-export default {
-  getAllNewsEverything,
-  searchNews,
-};
+  async searchNews(query: string): Promise<New[]> {
+    if (!query) return [];
+    try {
+      const endpoint = `${SEARCH}&q=${query.toLowerCase()}`;
+      const response: AxiosResponse = await apiClient.get(endpoint);
+
+      const formattedArticles = response.data.articles.map((article: any) =>
+        this.formatArticle(article)
+      );
+
+      return formattedArticles;
+    } catch (error) {
+      this.handleErrorResponse(error);
+      const articles = searchNewsDummy.articles;
+
+      return articles;
+    }
+  }
+}
+
+export default new NewsRepository();

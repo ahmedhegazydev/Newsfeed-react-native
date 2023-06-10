@@ -17,10 +17,10 @@ export default function EverythingNews({ data }: Props) {
     // console.log(value);
     if (value && value.length !== 0) {
       setSearchValue(value);
-      console.log("full");
+      // console.log("full");
     } else {
       setSearchValue(dataRef.current);
-      console.log("empty");
+      // console.log("empty");
     }
   };
 

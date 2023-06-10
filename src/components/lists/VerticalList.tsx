@@ -31,10 +31,8 @@ export default function VerticalList({ title, data }: Props) {
     setRefreshing(true);
     const { data: allNewsEverything, error } =
       await newsApi.getAllNewsEverything();
-    if (!error) {
-      setEverythingNews(allNewsEverything);
-      setRefreshing(false);
-    }
+    setEverythingNews(allNewsEverything);
+    setRefreshing(false);
   };
 
   const onRefresh = useCallback(() => {
@@ -70,7 +68,6 @@ export default function VerticalList({ title, data }: Props) {
           onRefresh={onRefresh}
         />
       }
-      // ItemSeparatorComponent={ItemDivider}
       style={styles.container}
       data={newsEverything}
       renderItem={({ item, index, separators }) => (
@@ -82,7 +79,7 @@ export default function VerticalList({ title, data }: Props) {
           key={item.id} // Use a unique key for each FlatCard
         />
       )}
-      keyExtractor={(item, index) => item.id + index.toString()} // Modify the keyExtractor
+      keyExtractor={(item, index) => item.id + index.toString()}
     />
   );
 }

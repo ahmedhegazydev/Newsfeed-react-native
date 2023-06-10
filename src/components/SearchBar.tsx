@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { StyleSheet, View, TextInput } from "react-native";
 import { TextInput as GestureTextInput } from "react-native-gesture-handler";
-import newsApi from "../api/NewApi";
+import NewsRepository from "../api/NewApi";
 import { New } from "../data/New";
 import SearchModal from "./common/SearchModal";
 import { LocalizationContext } from "../util/LocalizationContext";
@@ -44,8 +44,15 @@ export default function SearchBar({ onSearch }: Props) {
     console.log("value  = " + query);
     const trimmedText = value.trim();
     setQuery(trimmedText);
-    const articles = await newsApi.searchNews(value);
-    onSearch(articles);
+    // const articles = await NewsRepository.searchNews(value);
+    // onSearch(articles);
+    NewsRepository.searchNews("query")
+      .then((articles) => {
+        onSearch(articles);
+      })
+      .catch((error) => {
+        // Handle the error
+      });
   };
 
   const debounceSearch = debounce(handleSearch, setSearchTextAlways, 600);
