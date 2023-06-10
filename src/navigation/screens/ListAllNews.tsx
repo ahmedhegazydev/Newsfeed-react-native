@@ -63,7 +63,7 @@ export default function ListAllNewsScreen({
   return (
     <>
       <View style={styles.container}>
-        <SearchBar />
+        {/* <SearchBar /> */}
         <EverythingNews data={allNewsEverything} />
       </View>
       <ActivityIndicator visible={loading} />

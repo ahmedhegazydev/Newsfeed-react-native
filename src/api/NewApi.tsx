@@ -2,6 +2,9 @@ import moment from "moment";
 import apiClient from "./client";
 import { AxiosResponse } from "axios";
 import { HEADLINES, SEARCH } from "../constants/constants";
+import getAllNewsDummy from "../../src/assets/ApiDummy/getAllNewsDummy.json";
+import searchNewsDummy from "../../src/assets/ApiDummy/searchNewsDummy.json";
+import { showErrorToast } from "../../src/util/Toasts";
 
 interface NewsResponse {
   data: any[];
@@ -26,8 +29,11 @@ const getAllNewsEverything = async (): Promise<NewsResponse> => {
       console.log(error.response.headers);
     } else {
       console.log("Error while getting all everything news ", error.message);
+      showErrorToast(error.message);
     }
-    return { data: [], error: error };
+    const articles = getAllNewsDummy.articles;
+
+    return { data: articles, error: error };
   }
 };
 
@@ -50,8 +56,11 @@ const searchNews = async (query: string): Promise<any[]> => {
       console.log(error.response.headers);
     } else {
       console.log("Error while searching news ", error.message);
+      showErrorToast(error.message);
     }
-    return [];
+    const articles = searchNewsDummy.articles;
+
+    return articles;
   }
 };
 

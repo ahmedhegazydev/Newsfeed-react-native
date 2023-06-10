@@ -1,3 +1,5 @@
+import React, { useContext } from "react";
+
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 import { ScrollView, TextInput } from "react-native-gesture-handler";
 import FlatCard from "../cards/FlatCard";
