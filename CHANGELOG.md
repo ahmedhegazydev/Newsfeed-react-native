@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/ahmedhegazydev/Newsfeed-react-native/compare/v0.0.10...v0.0.11) (2023-06-10)
+
+
+### Features
+
+* adding dummy local json data if api failed ([60601af](https://github.com/ahmedhegazydev/Newsfeed-react-native/commit/60601afae92f14bff736cd35a90b4b82b339dac5))
+
 ### [0.0.10](https://github.com/ahmedhegazydev/Newsfeed-react-native/compare/v0.0.9...v0.0.10) (2023-06-10)
 
 
