@@ -9,4 +9,11 @@ module.exports = {
   reporters: ["detox/runners/jest/reporter"],
   testEnvironment: "detox/runners/jest/testEnvironment",
   verbose: true,
+  transform: {
+    "\\.[jt]sx?$": "babel-jest",
+  },
+  moduleNameMapper: {
+    "^react-native-toast-message$":
+      "<rootDir>/__mocks__/react-native-toast-message.js",
+  },
 };

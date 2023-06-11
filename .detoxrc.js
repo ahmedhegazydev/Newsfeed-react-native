@@ -28,11 +28,10 @@ module.exports = {
       binaryPath: "android/app/build/outputs/apk/debug/app-debug.apk",
       build:
         "cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug",
-      // reversePorts: [8081],
     },
     "android.release": {
       type: "android.apk",
-      binaryPath: "android/app/build/outputs/apk/debug/app-debug.apk",
+      binaryPath: "android/app/build/outputs/apk/release/app-release.apk",
       build:
         "cd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release",
     },
@@ -47,14 +46,14 @@ module.exports = {
     attached: {
       type: "android.attached",
       device: {
-        adbName: ".*", // any attached device
-        // adbName: "WKNNU4UGYDIFFIF6",
+        // adbName: ".*", // any attached device
+        adbName: "WKNNU4UGYDIFFIF6",
       },
     },
     emulator: {
       type: "android.emulator",
       device: {
-        avdName: "WKNNU4UGYDIFFIF6",
+        avdName: "Pixel_3_XL_API_33",
       },
     },
   },

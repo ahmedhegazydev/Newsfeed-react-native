@@ -8,7 +8,7 @@ import { showErrorToast } from "../../src/util/Toasts";
 import { New } from "../data/New";
 
 interface NewsResponse {
-  data: any[];
+  data: New[];
   error: string | Error;
 }
 
@@ -50,7 +50,7 @@ class NewsRepository {
   }
 
   async searchNews(query: string): Promise<New[]> {
-    if (!query) return [];
+    if (!query) return { data: [], error: "" };
     try {
       const endpoint = `${SEARCH}&q=${query.toLowerCase()}`;
       const response: AxiosResponse = await apiClient.get(endpoint);
@@ -58,12 +58,10 @@ class NewsRepository {
       const formattedArticles = response.data.articles.map((article: any) =>
         this.formatArticle(article)
       );
-
-      return formattedArticles;
+      return { data: formattedArticles, error: "" };
     } catch (error) {
       this.handleErrorResponse(error);
       const articles = searchNewsDummy.articles;
-
       return articles;
     }
   }
