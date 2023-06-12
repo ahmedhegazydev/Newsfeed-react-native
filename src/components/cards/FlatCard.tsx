@@ -8,6 +8,7 @@ import {
 import Title from "../common/Title";
 import SubTitle from "../common/SubTitle";
 import { ThemeContext } from "../../util/ThemeManager";
+import FastImage from "react-native-fast-image";
 
 interface FlatCardProps {
   item: {
@@ -23,9 +24,15 @@ export default function FlatCard({ item, onPress }: FlatCardProps) {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <TouchableWithoutFeedback onPress={onPress}>
+    <TouchableWithoutFeedback testID={`listItem-${title}`} onPress={onPress}>
       <View style={[styles.container, styles[`container${theme}`]]}>
-        <Image source={{ uri: urlToImage }} style={styles.image} />
+        {/* <Image source={{ uri: urlToImage }} style={styles.image} /> */}
+        <FastImage
+          source={{ uri: urlToImage }}
+          style={styles.image}
+          resizeMode={FastImage.resizeMode.cover}
+          cache={FastImage.cacheControl.immutable}
+        />
         <View style={styles.contentContainer}>
           <Title numberOfLines={2} size={18}>
             {title}

@@ -74,16 +74,19 @@ function MainContainer() {
         />
         <Tab.Screen
           name={SETTINGS_NAME}
+          // testID="settingsTabButton"
           options={{
             title: translate("setting"),
             tabBarIcon: ({ focused, color, size }) => (
               <Icon
+                testID="settingsTabButtonIcon"
                 name="settings"
                 color={focused ? Colors.primary : Colors.lightgrey}
                 size={24}
               />
             ),
           }}
+          // testID="settingsTabButton"
           component={SettingsScreen}
         />
       </Tab.Navigator>

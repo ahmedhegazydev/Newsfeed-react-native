@@ -16,4 +16,12 @@ module.exports = {
     "^react-native-toast-message$":
       "<rootDir>/__mocks__/react-native-toast-message.js",
   },
+  launchApp: {
+    // ios: {
+    // url: "myapp://app/allNews/3",
+    // },
+    android: {
+      url: "myapp://app/allNews/3",
+    },
+  },
 };

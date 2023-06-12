@@ -5,10 +5,10 @@ import { API_URL, HEADLINES } from "../../src/constants/constants";
 import NewsRepository from "../../src/api/NewApi";
 import jestExpect from "expect";
 
+// Passed
+
 describe("NewsRepository", () => {
-  beforeEach(async () => {
-    // await device.launchApp();
-  });
+  beforeEach(async () => {});
 
   it("test fetch all top headings news when calling getAllNewsEverything expect size != 0", async () => {
     const response = await NewsRepository.getAllNewsEverything();

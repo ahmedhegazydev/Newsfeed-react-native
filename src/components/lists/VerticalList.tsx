@@ -72,6 +72,7 @@ export default function VerticalList({ title, data }: Props) {
       data={newsEverything}
       renderItem={({ item, index, separators }) => (
         <FlatCard
+          // testID="listItem"
           onPress={() => {
             navigation.push(MORE_DETAILS_NEWS_NAME, { item });
           }}

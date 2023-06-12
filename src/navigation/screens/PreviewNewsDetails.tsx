@@ -40,14 +40,19 @@ const PreviewNewsDetailsScreen: React.FC<{
   } = route.params.item || {};
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView testID="newsDetailsScreen">
       <Image source={{ uri: image }} style={[styles.image]} />
       <View style={styles.contentContainer}>
-        <Text style={styles.title}>{title}</Text>
+        <Text testID="titleText" style={styles.title}>
+          {title}
+        </Text>
         <Hyperlink onPress={(url, text) => alert(url + ", " + text)}>
           <Text style={{ fontSize: 15, marginBottom: 6 }}>{url}</Text>
         </Hyperlink>
-        <Text style={{ fontSize: 15, fontWeight: "bold", marginTop: 10 }}>
+        <Text
+          testID="descriptionText"
+          style={{ fontSize: 15, fontWeight: "bold", marginTop: 10 }}
+        >
           Description:
         </Text>
         <Text style={styles.content}>{description}</Text>
@@ -57,7 +62,10 @@ const PreviewNewsDetailsScreen: React.FC<{
         </Text>
         <Text style={styles.content}>{content}</Text>
 
-        <Text style={{ fontSize: 15, fontWeight: "bold", marginTop: 10 }}>
+        <Text
+          testID="publishedAtText"
+          style={{ fontSize: 15, fontWeight: "bold", marginTop: 10 }}
+        >
           Published At:
         </Text>
         <Text style={styles.content}>{publishedAt}</Text>
@@ -79,7 +87,6 @@ const PreviewNewsDetailsScreen: React.FC<{
 export default PreviewNewsDetailsScreen;
 
 const styles = StyleSheet.create({
-  container: {},
   image: {
     width: width,
     height: height / 3,

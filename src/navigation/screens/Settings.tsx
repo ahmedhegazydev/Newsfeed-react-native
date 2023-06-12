@@ -62,8 +62,16 @@ export default function SettingsScreen({ navigation }) {
           _storeData();
         }}
         underlayColor="#fff"
+        testID="changeLanguageButton"
+        accessibilityLabel="changeLanguageButton"
       >
-        <Text style={styles.loginText}>Change To {selectedLang}</Text>
+        <Text
+          style={styles.loginText}
+          testID="languageSetting"
+          accessibilityLabel="languageSetting"
+        >
+          Change To {selectedLang}
+        </Text>
       </TouchableOpacity>
     </View>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { StyleSheet, View, Button } from "react-native";
+import { StyleSheet, View, Button, Text } from "react-native";
 
 import { createStackNavigator } from "@react-navigation/stack";
 import ListAllNewsScreen from "./ListAllNews";
@@ -38,12 +38,14 @@ export default function HomeScreen() {
         headerRight: () => (
           <View style={{ marginRight: 11 }}>
             <Button
+              testID="toggleThemeButton"
               color="orange"
               title={translate("toggle_theme")}
               onPress={() => {
                 toggleTheme();
               }}
             />
+            <Text testID="themeText">{toggleTheme}</Text>
           </View>
         ),
       }}

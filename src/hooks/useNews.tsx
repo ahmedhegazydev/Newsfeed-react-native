@@ -16,10 +16,6 @@ const useNews = () => {
         setEverythingNews(allNewsEverything);
         setLoading(false);
       }
-
-      for (let i = 0; i < allNewsEverything.length; i++) {
-        allNewsEverything[i].id = i;
-      }
     } catch (error) {
       // Handle the error
     }
