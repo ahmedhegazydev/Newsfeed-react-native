@@ -45,7 +45,7 @@ export default function HomeScreen() {
                 toggleTheme();
               }}
             />
-            <Text testID="themeText">{toggleTheme}</Text>
+            {/* <Text testID="themeText">{toggleTheme}</Text> */}
           </View>
         ),
       }}

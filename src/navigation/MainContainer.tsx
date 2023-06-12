@@ -74,7 +74,6 @@ function MainContainer() {
         />
         <Tab.Screen
           name={SETTINGS_NAME}
-          // testID="settingsTabButton"
           options={{
             title: translate("setting"),
             tabBarIcon: ({ focused, color, size }) => (
@@ -86,7 +85,6 @@ function MainContainer() {
               />
             ),
           }}
-          // testID="settingsTabButton"
           component={SettingsScreen}
         />
       </Tab.Navigator>
