@@ -39,8 +39,6 @@
 #import "FlipperKitNetworkPlugin/SKRequestInfo.h"
 #import "FlipperKitNetworkPlugin/SKResponseInfo.h"
 #import "FlipperKitNetworkPlugin/FlipperKitNetworkPlugin.h"
-#import "FlipperKitReactPlugin/FlipperKitReactPlugin.h"
-#import "FlipperKitUserDefaultsPlugin/FKUserDefaultsPlugin.h"
 #import "SKIOSNetworkPlugin/SKIOSNetworkAdapter.h"
 
 FOUNDATION_EXPORT double FlipperKitVersionNumber;

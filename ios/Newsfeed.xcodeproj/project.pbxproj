@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* NewsfeedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* NewsfeedTests.m */; };
+		103579DC0AB6FF0041F0E60B /* libPods-Newsfeed-NewsfeedTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A034AA149BB3E4B77E4B7F05 /* libPods-Newsfeed-NewsfeedTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		53C8F5D85401FBEE93D4D2B0 /* libPods-Newsfeed-NewsfeedTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C144C37C296BAD1896756E7 /* libPods-Newsfeed-NewsfeedTests.a */; };
-		57FE5DBAF1649C3010191EFA /* libPods-Newsfeed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07179ED16CCB2AD1F5E79F50 /* libPods-Newsfeed.a */; };
+		2E79F67F431245A852040016 /* libPods-Newsfeed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EEEA9000997A7F0E582B396 /* libPods-Newsfeed.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,6 @@
 		00E356EE1AD99517003FC87E /* NewsfeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsfeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* NewsfeedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsfeedTests.m; sourceTree = "<group>"; };
-		07179ED16CCB2AD1F5E79F50 /* libPods-Newsfeed.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Newsfeed.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* Newsfeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsfeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Newsfeed/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Newsfeed/AppDelegate.mm; sourceTree = "<group>"; };
@@ -44,22 +43,23 @@
 		2C4E35A2F5484BE1BE4DB331 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		30120D47666C4B3789A372C2 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		322E8DA5523346279ACD04DB /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		653600AB88B59A803E7A3060 /* Pods-Newsfeed-NewsfeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsfeed-NewsfeedTests.debug.xcconfig"; path = "Target Support Files/Pods-Newsfeed-NewsfeedTests/Pods-Newsfeed-NewsfeedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		33DA19BFEFBBA10060EDC6DF /* Pods-Newsfeed-NewsfeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsfeed-NewsfeedTests.debug.xcconfig"; path = "Target Support Files/Pods-Newsfeed-NewsfeedTests/Pods-Newsfeed-NewsfeedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		58CC27C6C0FC1AD167F991F5 /* Pods-Newsfeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsfeed.release.xcconfig"; path = "Target Support Files/Pods-Newsfeed/Pods-Newsfeed.release.xcconfig"; sourceTree = "<group>"; };
 		670A06758CA34149B8DFF337 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		754B614E167749CD991D6933 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		79E0478F5328472B9FE08E8B /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Newsfeed/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A0C439F1CEF44399A53CEFB /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
-		8C144C37C296BAD1896756E7 /* libPods-Newsfeed-NewsfeedTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Newsfeed-NewsfeedTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1307F3575BE55BFFABF13A /* Pods-Newsfeed-NewsfeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsfeed-NewsfeedTests.release.xcconfig"; path = "Target Support Files/Pods-Newsfeed-NewsfeedTests/Pods-Newsfeed-NewsfeedTests.release.xcconfig"; sourceTree = "<group>"; };
 		98A6B3A680464405A45C096B /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		9E84368F27FB66B7007EDABD /* Newsfeed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Newsfeed.entitlements; path = Newsfeed/Newsfeed.entitlements; sourceTree = "<group>"; };
+		9EEEA9000997A7F0E582B396 /* libPods-Newsfeed.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Newsfeed.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A034AA149BB3E4B77E4B7F05 /* libPods-Newsfeed-NewsfeedTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Newsfeed-NewsfeedTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31E278D08204B5EB94697CE /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
-		DAAEF90FA2E51B6A2EB26BC8 /* Pods-Newsfeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsfeed.debug.xcconfig"; path = "Target Support Files/Pods-Newsfeed/Pods-Newsfeed.debug.xcconfig"; sourceTree = "<group>"; };
+		B8BC0EF3D4027649CE8C7E2A /* Pods-Newsfeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsfeed.debug.xcconfig"; path = "Target Support Files/Pods-Newsfeed/Pods-Newsfeed.debug.xcconfig"; sourceTree = "<group>"; };
 		E263B415D3074F66A31DB3D3 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EE034464FC5B4487898341B0 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
-		F7F8C583879F709BAF3B3044 /* Pods-Newsfeed-NewsfeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsfeed-NewsfeedTests.release.xcconfig"; path = "Target Support Files/Pods-Newsfeed-NewsfeedTests/Pods-Newsfeed-NewsfeedTests.release.xcconfig"; sourceTree = "<group>"; };
-		F85ACD12D542BB449682C921 /* Pods-Newsfeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsfeed.release.xcconfig"; path = "Target Support Files/Pods-Newsfeed/Pods-Newsfeed.release.xcconfig"; sourceTree = "<group>"; };
 		FBAAF4FF4D334D2FADEA9F49 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53C8F5D85401FBEE93D4D2B0 /* libPods-Newsfeed-NewsfeedTests.a in Frameworks */,
+				103579DC0AB6FF0041F0E60B /* libPods-Newsfeed-NewsfeedTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57FE5DBAF1649C3010191EFA /* libPods-Newsfeed.a in Frameworks */,
+				2E79F67F431245A852040016 /* libPods-Newsfeed.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,8 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				07179ED16CCB2AD1F5E79F50 /* libPods-Newsfeed.a */,
-				8C144C37C296BAD1896756E7 /* libPods-Newsfeed-NewsfeedTests.a */,
+				9EEEA9000997A7F0E582B396 /* libPods-Newsfeed.a */,
+				A034AA149BB3E4B77E4B7F05 /* libPods-Newsfeed-NewsfeedTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,10 +182,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DAAEF90FA2E51B6A2EB26BC8 /* Pods-Newsfeed.debug.xcconfig */,
-				F85ACD12D542BB449682C921 /* Pods-Newsfeed.release.xcconfig */,
-				653600AB88B59A803E7A3060 /* Pods-Newsfeed-NewsfeedTests.debug.xcconfig */,
-				F7F8C583879F709BAF3B3044 /* Pods-Newsfeed-NewsfeedTests.release.xcconfig */,
+				B8BC0EF3D4027649CE8C7E2A /* Pods-Newsfeed.debug.xcconfig */,
+				58CC27C6C0FC1AD167F991F5 /* Pods-Newsfeed.release.xcconfig */,
+				33DA19BFEFBBA10060EDC6DF /* Pods-Newsfeed-NewsfeedTests.debug.xcconfig */,
+				8D1307F3575BE55BFFABF13A /* Pods-Newsfeed-NewsfeedTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -197,12 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "NewsfeedTests" */;
 			buildPhases = (
-				05376FF4AD1CBD0634C2ABBF /* [CP] Check Pods Manifest.lock */,
+				4BE99A8040A4349A15930827 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				E36424ABED2CFFE8CECEC827 /* [CP] Embed Pods Frameworks */,
-				F49292DE31656D4A51D04784 /* [CP] Copy Pods Resources */,
+				F6CD8D84F51CC884F05E1B00 /* [CP] Embed Pods Frameworks */,
+				E6FFB1F5930D21A8F2376A71 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,14 +218,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Newsfeed" */;
 			buildPhases = (
-				961B774AF8F77B8E424E4623 /* [CP] Check Pods Manifest.lock */,
+				3AF811BFF871D20508D55A65 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				FBADBDC1A9771EC23EA8CF54 /* [CP] Embed Pods Frameworks */,
-				6026B776CDE46582BA7A80FA /* [CP] Copy Pods Resources */,
+				312A61BC3510BA2A08769E9E /* [CP] Embed Pods Frameworks */,
+				43DED148FBA94E43D3FC8508 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,46 +306,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		05376FF4AD1CBD0634C2ABBF /* [CP] Check Pods Manifest.lock */ = {
+		312A61BC3510BA2A08769E9E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Newsfeed/Pods-Newsfeed-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Newsfeed-NewsfeedTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-Newsfeed/Pods-Newsfeed-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Newsfeed/Pods-Newsfeed-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6026B776CDE46582BA7A80FA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Newsfeed/Pods-Newsfeed-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Newsfeed/Pods-Newsfeed-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Newsfeed/Pods-Newsfeed-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		961B774AF8F77B8E424E4623 /* [CP] Check Pods Manifest.lock */ = {
+		3AF811BFF871D20508D55A65 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,24 +345,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E36424ABED2CFFE8CECEC827 /* [CP] Embed Pods Frameworks */ = {
+		43DED148FBA94E43D3FC8508 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Newsfeed-NewsfeedTests/Pods-Newsfeed-NewsfeedTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Newsfeed/Pods-Newsfeed-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Newsfeed-NewsfeedTests/Pods-Newsfeed-NewsfeedTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Newsfeed/Pods-Newsfeed-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Newsfeed-NewsfeedTests/Pods-Newsfeed-NewsfeedTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Newsfeed/Pods-Newsfeed-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F49292DE31656D4A51D04784 /* [CP] Copy Pods Resources */ = {
+		4BE99A8040A4349A15930827 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Newsfeed-NewsfeedTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6FFB1F5930D21A8F2376A71 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -401,21 +401,21 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Newsfeed-NewsfeedTests/Pods-Newsfeed-NewsfeedTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FBADBDC1A9771EC23EA8CF54 /* [CP] Embed Pods Frameworks */ = {
+		F6CD8D84F51CC884F05E1B00 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Newsfeed/Pods-Newsfeed-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Newsfeed-NewsfeedTests/Pods-Newsfeed-NewsfeedTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Newsfeed/Pods-Newsfeed-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Newsfeed-NewsfeedTests/Pods-Newsfeed-NewsfeedTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Newsfeed/Pods-Newsfeed-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Newsfeed-NewsfeedTests/Pods-Newsfeed-NewsfeedTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -470,7 +470,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 653600AB88B59A803E7A3060 /* Pods-Newsfeed-NewsfeedTests.debug.xcconfig */;
+			baseConfigurationReference = 33DA19BFEFBBA10060EDC6DF /* Pods-Newsfeed-NewsfeedTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -497,7 +497,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7F8C583879F709BAF3B3044 /* Pods-Newsfeed-NewsfeedTests.release.xcconfig */;
+			baseConfigurationReference = 8D1307F3575BE55BFFABF13A /* Pods-Newsfeed-NewsfeedTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -521,7 +521,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAAEF90FA2E51B6A2EB26BC8 /* Pods-Newsfeed.debug.xcconfig */;
+			baseConfigurationReference = B8BC0EF3D4027649CE8C7E2A /* Pods-Newsfeed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -548,7 +548,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F85ACD12D542BB449682C921 /* Pods-Newsfeed.release.xcconfig */;
+			baseConfigurationReference = 58CC27C6C0FC1AD167F991F5 /* Pods-Newsfeed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
