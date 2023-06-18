@@ -1,16 +1,8 @@
-import React, { useState, useEffect, createRef, useLayoutEffect } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  TextInput,
-} from "react-native";
-import SearchBar from "../../components/SearchBar";
+import React, { useEffect } from "react";
+import { StyleSheet, View } from "react-native";
 import EverythingNews from "../../components/NewsEverything";
 import useNews from "../../hooks/useNews";
 import ActivityIndicator from "../../components/common/ActivityIndicator";
-import { useNavigation } from "@react-navigation/native";
 import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";
 import { StackNavigationProp } from "@react-navigation/stack";
 

@@ -1,13 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  ActivityIndicator,
-  Platform,
-} from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import { View, StyleSheet, FlatList } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
 import { RefreshControl } from "react-native-web-refresh-control";

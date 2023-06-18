@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 
-import { StyleSheet, Text, View, Dimensions } from "react-native";
-import { ScrollView, TextInput } from "react-native-gesture-handler";
+import { StyleSheet, Text, View, Dimensions, ScrollView } from "react-native";
 import FlatCard from "../cards/FlatCard";
 import { useNavigation, StackNavigationProp } from "@react-navigation/native";
 import { MORE_DETAILS_NEWS_NAME } from "../../constants/constants";

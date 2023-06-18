@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { StyleSheet, View, TextInput } from "react-native";
-import { TextInput as GestureTextInput } from "react-native-gesture-handler";
 import NewsRepository from "../api/NewApi";
 import { New } from "../data/New";
-import SearchModal from "./common/SearchModal";
 import { LocalizationContext } from "../util/LocalizationContext";
 import { ThemeContext } from "react-native-elements";
 

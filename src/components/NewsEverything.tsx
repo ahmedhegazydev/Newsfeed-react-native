@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, View } from "react-native";
 import VerticalList from "./lists/VerticalList";
 import { New } from "../data/New";
 import SearchBar from "./SearchBar";

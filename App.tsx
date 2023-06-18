@@ -1,12 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  StatusBar,
-  TouchableOpacity,
-} from "react-native";
-import { Appearance } from "react-native";
+import { StyleSheet } from "react-native";
 import MainContainer from "./src/navigation/MainContainer";
 import { ThemeProvider, ThemeContext } from "./src/util/ThemeManager";
 import * as RNLocalize from "react-native-localize";
