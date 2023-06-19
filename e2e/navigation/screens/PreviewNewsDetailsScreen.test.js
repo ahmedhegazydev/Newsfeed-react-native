@@ -1,10 +1,4 @@
 import { device, expect, element, by } from "detox";
-import jestExpect from "expect";
-import { renderHook, act } from "@testing-library/react-hooks";
-import useNews from "../../../src/hooks/useNews";
-import { waitFor } from "@testing-library/react-native";
-
-// Passed
 
 describe("PreviewNewsDetailsScreen", () => {
   beforeEach(async () => {

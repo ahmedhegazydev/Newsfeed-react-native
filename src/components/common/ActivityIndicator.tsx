@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createRef, useRef } from "react";
+import React, { useRef } from "react";
 import { StyleSheet, View, Animated } from "react-native";
 import * as Progress from "react-native-progress";
 

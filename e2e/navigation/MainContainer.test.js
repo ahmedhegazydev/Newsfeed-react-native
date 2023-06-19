@@ -1,7 +1,4 @@
 import { device, expect, element, by } from "detox";
-import { HOME_NAME, LIST_ALL_NEWS_NAME } from "../../src/constants/constants";
-
-// Passed
 
 describe("Deep Linking", () => {
   beforeEach(async () => {});

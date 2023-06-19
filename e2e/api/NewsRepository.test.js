@@ -1,11 +1,5 @@
-import { device, expect, element, by } from "detox";
-import axios from "axios";
-import client from "../../src/api/client";
-import { API_URL, HEADLINES } from "../../src/constants/constants";
 import NewsRepository from "../../src/api/NewApi";
 import jestExpect from "expect";
-
-// Passed
 
 describe("NewsRepository", () => {
   beforeEach(async () => {});

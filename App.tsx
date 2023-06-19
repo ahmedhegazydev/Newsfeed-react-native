@@ -7,11 +7,13 @@ import i18n from "i18n-js";
 import { LocalizationContext } from "./src/util/LocalizationContext";
 import { AsyncStorage } from "react-native";
 import { KEY_STORE_LANGUAGE } from "./src/constants/constants";
+import enTranslation from "./src/assets/translations/en.json";
+import arTranslation from "./src/assets/translations/ar.json";
 
 i18n.fallbacks = true;
 i18n.translations = {
-  en: require("./src/assets/translations/en.json"),
-  ar: require("./src/assets/translations/ar.json"),
+  en: enTranslation,
+  ar: arTranslation,
 };
 
 export default function App() {

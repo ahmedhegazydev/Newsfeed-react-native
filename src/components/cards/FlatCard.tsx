@@ -1,10 +1,5 @@
 import React, { useContext } from "react";
-import {
-  StyleSheet,
-  View,
-  Image,
-  TouchableWithoutFeedback,
-} from "react-native";
+import { StyleSheet, View, TouchableWithoutFeedback } from "react-native";
 import Title from "../common/Title";
 import SubTitle from "../common/SubTitle";
 import { ThemeContext } from "../../util/ThemeManager";
@@ -26,12 +21,10 @@ export default function FlatCard({ item, onPress }: FlatCardProps) {
   return (
     <TouchableWithoutFeedback testID={`listItem-${title}`} onPress={onPress}>
       <View style={[styles.container, styles[`container${theme}`]]}>
-        {/* <Image source={{ uri: urlToImage }} style={styles.image} /> */}
         <FastImage
           source={{ uri: urlToImage }}
           style={styles.image}
           resizeMode={FastImage.resizeMode.cover}
-          cache={FastImage.cacheControl.immutable}
         />
         <View style={styles.contentContainer}>
           <Title numberOfLines={2} size={18}>
