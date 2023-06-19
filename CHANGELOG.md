@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.19](https://github.com/ahmedhegazydev/Newsfeed-react-native/compare/v0.0.18...v0.0.19) (2023-06-19)
+
+
+### Bug Fixes
+
+* fix running android and ios ([c046b99](https://github.com/ahmedhegazydev/Newsfeed-react-native/commit/c046b991454b0c43e5d88c858775394626ef0170))
+
 ### [0.0.18](https://github.com/ahmedhegazydev/Newsfeed-react-native/compare/v0.0.17...v0.0.18) (2023-06-18)
 
 ### [0.0.17](https://github.com/ahmedhegazydev/Newsfeed-react-native/compare/v0.0.16...v0.0.17) (2023-06-17)
