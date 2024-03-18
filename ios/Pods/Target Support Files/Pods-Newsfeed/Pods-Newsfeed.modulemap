@@ -1,6 +1,0 @@
-module Pods_Newsfeed {
-  umbrella header "Pods-Newsfeed-umbrella.h"
-
-  export *
-  module * { export * }
-}
